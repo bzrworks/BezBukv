@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Tray_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Tray_Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Tray_AutoPeek" xml:space="preserve">
+    <value>Auto Peek</value>
+  </data>
+  <data name="Tray_Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Tray_Tooltip_Paused" xml:space="preserve">
+    <value>{0}&#xA;Paused</value>
+  </data>
+  <data name="Tray_Tooltip_Running" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Notification_Title" xml:space="preserve">
+    <value>BezBukv</value>
+  </data>
+  <data name="Notification_Welcome" xml:space="preserve">
+    <value>BezBukv is running in the background.</value>
+  </data>
+  <data name="Notification_InfoGlyph" xml:space="preserve">
+    <value>i</value>
+  </data>
+  <data name="Notification_WarningGlyph" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="KeyboardProfilePicker_Title" xml:space="preserve">
+    <value>Choose your keyboard</value>
+  </data>
+  <data name="KeyboardProfilePicker_LayoutHeading" xml:space="preserve">
+    <value>Choose your layouts</value>
+  </data>
+  <data name="KeyboardProfilePicker_PrimaryLayout_Header" xml:space="preserve">
+    <value>Primary</value>
+  </data>
+  <data name="KeyboardProfilePicker_SecondaryLayout_Header" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="KeyboardProfilePicker_NoSecondaryLayout" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="KeyboardProfilePicker_PrimaryLayout_AutomationName" xml:space="preserve">
+    <value>Primary keyboard layout</value>
+  </data>
+  <data name="KeyboardProfilePicker_SecondaryLayout_AutomationName" xml:space="preserve">
+    <value>Secondary keyboard layout</value>
+  </data>
+  <data name="KeyboardProfilePicker_Heading" xml:space="preserve">
+    <value>Compare the highlighted keys with your keyboard. You can change this later in Settings.</value>
+  </data>
+  <data name="KeyboardProfilePicker_WideEnter_Title" xml:space="preserve">
+    <value>Wide Enter</value>
+  </data>
+  <data name="KeyboardProfilePicker_TallEnter_Title" xml:space="preserve">
+    <value>Tall Enter</value>
+  </data>
+  <data name="KeyboardProfilePicker_Custom_Title" xml:space="preserve">
+    <value>Create a custom keyboard</value>
+  </data>
+  <data name="KeyboardProfilePicker_Custom_Tooltip" xml:space="preserve">
+    <value>Map your keyboard layout.</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Q" xml:space="preserve">
+    <value>Q</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Caps" xml:space="preserve">
+    <value>Caps</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Z" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Backslash" xml:space="preserve">
+    <value>\</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_P" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_LeftBracket" xml:space="preserve">
+    <value>[</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_RightBracket" xml:space="preserve">
+    <value>]</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Semicolon" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Apostrophe" xml:space="preserve">
+    <value>'</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Period" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Slash" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="KeyboardCalibration_Title" xml:space="preserve">
+    <value>Calibrate your keyboard</value>
+  </data>
+  <data name="KeyboardCalibration_Hint" xml:space="preserve">
+    <value>Press keys from left to right. Press the same key multiple times to make it wider.</value>
+  </data>
+  <data name="KeyboardCalibration_Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="KeyboardCalibration_Resume" xml:space="preserve">
+    <value>Resume</value>
+  </data>
+  <data name="KeyboardCalibration_PausedHint" xml:space="preserve">
+    <value>Calibration is paused. Your keyboard is available. Select Resume to continue.</value>
+  </data>
+  <data name="KeyboardCalibration_AddEmptySlot_ToolTip" xml:space="preserve">
+    <value>Add empty slot</value>
+  </data>
+  <data name="KeyboardCalibration_AddEscape_Label" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="KeyboardCalibration_AddEscape_ToolTip" xml:space="preserve">
+    <value>Add Escape key here</value>
+  </data>
+  <data name="KeyboardCalibration_Undo_ToolTip" xml:space="preserve">
+    <value>Undo last cell</value>
+  </data>
+  <data name="KeyboardCalibration_ResetRow_ToolTip" xml:space="preserve">
+    <value>Reset row</value>
+  </data>
+  <data name="KeyboardCalibration_NextRow_ToolTip" xml:space="preserve">
+    <value>Next row</value>
+  </data>
+  <data name="KeyboardCalibration_Cancel_ToolTip" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="KeyboardCalibration_Finish_ToolTip" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="KeyboardCalibration_InvalidGeometry" xml:space="preserve">
+    <value>Add at least one key before finishing.</value>
+  </data>
+  <data name="KeyboardCalibration_CaptureFailed" xml:space="preserve">
+    <value>Keyboard calibration could not start.</value>
+  </data>
+  <data name="Hotkey_Unavailable" xml:space="preserve">
+    <value>{0} ({1}): the shortcut is already in use.</value>
+  </data>
+  <data name="Hotkey_RegistrationFailed" xml:space="preserve">
+    <value>{0} ({1}): could not register the shortcut.</value>
+  </data>
+  <data name="Hotkey_CorrectionFunction" xml:space="preserve">
+    <value>Correction</value>
+  </data>
+  <data name="Hotkey_PeekFunction" xml:space="preserve">
+    <value>Peek</value>
+  </data>
+  <data name="Hotkey_ChangeShortcutHint" xml:space="preserve">
+    <value>You can change the shortcut in Settings.</value>
+  </data>
+  <data name="Correction_NothingToConvert" xml:space="preserve">
+    <value>The selected text contains no Latin or Cyrillic letters.</value>
+  </data>
+  <data name="Correction_InputError" xml:space="preserve">
+    <value>The correction could not be completed. Try again.</value>
+  </data>
+  <data name="FocusedElement_Editable" xml:space="preserve">
+    <value>Editable</value>
+  </data>
+  <data name="FocusedElement_ReadOnly" xml:space="preserve">
+    <value>ReadOnly</value>
+  </data>
+  <data name="FocusedElement_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="FocusedElementDiagnostic_Result" xml:space="preserve">
+    <value>Editability: {0}; application: {1}; terminal: {2}.</value>
+  </data>
+  <data name="ActiveApplication_Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="ActiveApplication_TerminalTrue" xml:space="preserve">
+    <value>true</value>
+  </data>
+  <data name="ActiveApplication_TerminalFalse" xml:space="preserve">
+    <value>false</value>
+  </data>
+  <data name="ActiveApplication_TerminalUnknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="Result_Title" xml:space="preserve">
+    <value>Corrected layout</value>
+  </data>
+  <data name="Result_CopyButton" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Result_TryPasteButton" xml:space="preserve">
+    <value>Try to paste — success not guaranteed</value>
+  </data>
+  <data name="Result_CloseButton" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Result_SelectionHint" xml:space="preserve">
+    <value>Select a part if you don't need the whole text.</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>BezBukv — Settings</value>
+  </data>
+  <data name="Settings_Close" xml:space="preserve">
+    <value>Close settings</value>
+  </data>
+  <data name="Settings_Header_SettingsSuffix" xml:space="preserve">
+    <value>— Settings</value>
+  </data>
+  <data name="Settings_Nav_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Settings_Nav_Correction" xml:space="preserve">
+    <value>Correction</value>
+  </data>
+  <data name="Settings_Nav_Peek" xml:space="preserve">
+    <value>Peek</value>
+  </data>
+  <data name="Settings_Nav_Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Settings_Nav_Guide" xml:space="preserve">
+    <value>Guide</value>
+  </data>
+  <data name="Settings_About_ProductName" xml:space="preserve">
+    <value>BezBukv</value>
+  </data>
+  <data name="Settings_About_VersionFormat" xml:space="preserve">
+    <value>Version {0}</value>
+  </data>
+  <data name="Settings_About_SupportDescription" xml:space="preserve">
+    <value>Help the developer grow.</value>
+  </data>
+  <data name="Settings_About_SourceCode" xml:space="preserve">
+    <value>Source code</value>
+  </data>
+  <data name="Settings_About_ReportProblem" xml:space="preserve">
+    <value>Report a problem</value>
+  </data>
+  <data name="Settings_About_SupportButton" xml:space="preserve">
+    <value>Support the project</value>
+  </data>
+  <data name="Settings_Guide_Title" xml:space="preserve">
+    <value>Guide</value>
+  </data>
+  <data name="GuideWindow_Title" xml:space="preserve">
+    <value>BezBukv — Guide</value>
+  </data>
+  <data name="Settings_Guide_OpenWindowToolTip" xml:space="preserve">
+    <value>Open in a separate window</value>
+  </data>
+  <data name="Settings_Guide_IntroductionParagraph1" xml:space="preserve">
+    <value>BezBukv is your keyboard assistant. It lives in the notification area, stays out of your way, and helps when something goes wrong with typing.</value>
+  </data>
+  <data name="Settings_Guide_IntroductionParagraph2" xml:space="preserve">
+    <value>Typed a paragraph in the wrong layout? Select it and press the hotkey: the text will be corrected between English (US) and Russian layouts, and if desired, the layout will switch itself, so you can continue typing normally. No internet or AI required, everything is done using built-in tables right on your computer, and nothing is sent anywhere.</value>
+  </data>
+  <data name="Settings_Guide_IntroductionParagraph3" xml:space="preserve">
+    <value>BezBukv can also show key hints. Engraving worn off? Missing the right layout on the keys? Learning touch typing? A card on the screen will show where the right key is, so you don't have to look for it on the keyboard.</value>
+  </data>
+  <data name="Settings_Guide_TrayTitle" xml:space="preserve">
+    <value>Tray icon and menu</value>
+  </data>
+  <data name="Settings_Guide_TrayOverviewParagraph" xml:space="preserve">
+    <value>BezBukv has no main window; everything is controlled through the icon in the notification area. Right-clicking the icon opens the menu; left-clicking pauses or resumes the app.</value>
+  </data>
+  <data name="Settings_Guide_TrayMenuIntro" xml:space="preserve">
+    <value>The menu has four items:</value>
+  </data>
+  <data name="Settings_Guide_TrayPauseParagraph" xml:space="preserve">
+    <value>**Pause** suspends BezBukv. The assigned shortcuts (text correction, Hold Peek) stop working, and keystroke tracking for Auto Peek is turned off. The pause lasts until the app restarts or you resume it manually. While the app is paused, the icon turns gray. Handy times to pause: temporarily freeing up shortcuts for another program; quickly turning off hints while you type a password.</value>
+  </data>
+  <data name="Settings_Guide_TrayAutoHintsParagraph" xml:space="preserve">
+    <value>**Auto Peek** turns on hints for the keys you press, right as you type. The ways to bring up hints are covered in detail in the "Peek" section.</value>
+  </data>
+  <data name="Settings_Guide_TraySettingsParagraph" xml:space="preserve">
+    <value>**Settings** opens the Settings window.</value>
+  </data>
+  <data name="Settings_Guide_TrayExitParagraph" xml:space="preserve">
+    <value>**Exit** closes BezBukv completely.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowTitle" xml:space="preserve">
+    <value>Settings window and common controls</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowOverviewParagraph" xml:space="preserve">
+    <value>Tabs are listed on the left, their settings on the right. The X in the corner and the `Escape` key close only the Settings window. BezBukv itself keeps running in the background.</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsTitle" xml:space="preserve">
+    <value>Good to know up front</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph1" xml:space="preserve">
+    <value>Settings apply on the fly. Change a setting and it's already in effect: nothing to confirm, save, or restart. So feel free to try settings out and see the result right away.</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph2" xml:space="preserve">
+    <value>If you often get the result window instead of a paste, the reason is most likely the default behavior: BezBukv doesn't paste corrected text into fields that can't be unambiguously identified as editable. This is a deliberate choice in favor of control over where your text ends up. Pasting into such fields can be turned on, and it works in many apps. See "Undetermined fields and paste attempts" for how it works and where to turn it on.</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph3" xml:space="preserve">
+    <value>You can pause the app if you need to rule out any involvement from BezBukv in your keystrokes, for example hints appearing while you type a password, or if you need to free up its registered shortcuts.</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph4" xml:space="preserve">
+    <value>If a shortcut assigned to BezBukv is already taken by another app at startup, you'll see a warning, and that shortcut won't be captured. The corresponding feature (correction or Peek) is turned off automatically. In the Settings window, a warning icon appears next to the shortcut that couldn't be registered. On a normal startup with no conflicts, you get a short notification instead: "BezBukv is running in the background".</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph5" xml:space="preserve">
+    <value>The app works through the clipboard. If there was something in the clipboard before you invoked it, it will try to save those contents and restore them afterwards (more on this in the clipboard section).</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph6" xml:space="preserve">
+    <value>When correcting punctuation marks that sit on different keys in different layouts, the direction is determined by the neighboring letters. It's best to review important text after correction.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph1" xml:space="preserve">
+    <value>Three buttons at the bottom:</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph2" xml:space="preserve">
+    <value>**Import** lets you pick a settings file in JSON format. A successful import replaces your entire saved set of settings rather than merging it with the current one. A corrupted file won't replace your current settings. If shortcuts specified in the imported file turn out to be taken, BezBukv won't be able to register them with the OS, and the corresponding features will be turned off with a warning. The rest of the settings from the file will still be applied.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph3" xml:space="preserve">
+    <value>**Export** saves your entire current set of settings to a JSON file of your choice. This is handy before moving your settings to another computer or before a reset.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph4" xml:space="preserve">
+    <value>**Reset to defaults** returns the saved settings to their default values without asking for confirmation, so if you might need your current setup later, it's best to export it first.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph5" xml:space="preserve">
+    <value>The **Start with Windows** setting has its own toggle on the "General" tab. Neither import nor reset touches it.</value>
+  </data>
+  <data name="Settings_Guide_GeneralTitle" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph1" xml:space="preserve">
+    <value>The **"General"** tab covers the interface and app startup.</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph2" xml:space="preserve">
+    <value>**Language** switches between System, English, and Russian. In "System" mode, BezBukv follows your Windows language. Translations currently exist only for English and Russian, so if your system language isn't one of those two, English is used.</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph3" xml:space="preserve">
+    <value>**Theme** (System, Light, or Dark) applies to all app windows. "System" follows the Windows theme and changes along with it; the other two options lock in the chosen look regardless of the system one.</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph4" xml:space="preserve">
+    <value>**Start with Windows** adds BezBukv to startup when you sign in to your account. Under the hood, this is a registry entry with the path to the executable. If Windows for some reason doesn't allow the change, the toggle flips back and BezBukv shows a warning.</value>
+  </data>
+  <data name="Settings_Guide_LayoutCorrectionTitle" xml:space="preserve">
+    <value>Layout Correction</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyTitle" xml:space="preserve">
+    <value>How to correct text and set the shortcut</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyParagraph1" xml:space="preserve">
+    <value>To correct text typed in the wrong layout, select it and press the shortcut set in the settings once. By default it's `Ctrl+F7`. BezBukv grabs the selection, converts it, and decides where to put the result. This depends on what property the text field has (more on the three field types and how the choice is made below, in the section on undetermined fields). If the field is editable, the corrected text replaces the old text automatically. However, this paste goes through the receiving app, so BezBukv can't guarantee it succeeds.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyParagraph2" xml:space="preserve">
+    <value>The **Correct text in the wrong layout** toggle turns the whole feature on and off. When it's off, the shortcut is freed up and other programs can use it. When you turn it on, the app tries to register the shortcut again. If it's already taken, you'll see a warning, and BezBukv won't take it away from the other program.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyParagraph3" xml:space="preserve">
+    <value>To change the shortcut, click **Change** and, holding only `Ctrl`, press a single letter `A`–`Z`, digit `0`–`9`, or function key `F1`–`F24`. Two modifiers at once, such as `Ctrl+Shift`, aren't supported at the moment. If the new shortcut is valid and free, it takes effect right away. A shortcut that's taken or conflicts with the shortcut of another app feature is rejected, and the previous shortcut keeps working as before. While recording, a **Clear** button appears next to it. It removes the assignment and frees the shortcut entirely, so you won't be able to start correction from the keyboard until a new one is assigned. The **Cancel** button, the `Escape` key, or the window losing focus end the recording with no changes. The correction shortcut doesn't depend on the layout: it's tied to the physical key, not to a language.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorTitle" xml:space="preserve">
+    <value>How correction works and what it's designed for</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph1" xml:space="preserve">
+    <value>The supported pair is specifically **US English ↔ Russian ЙЦУКЕН**. Anything else falls outside it, and there are two ways it can differ.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph2" xml:space="preserve">
+    <value>If your English layout isn't US (for example, UK English), accurate correction isn't guaranteed. Letters on these layouts are in the same places as on US and convert correctly. However, characters like `"`, `@`, `#`, `~`, `\` are placed differently, and the app is designed specifically for the US placement.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph3" xml:space="preserve">
+    <value>If your Russian layout isn't ЙЦУКЕН but a phonetic one (the "ЯВЕРТ" type, where Russian letters are placed by how they sound compared to Latin ones), things are worse. The app's table is built on ЙЦУКЕН key positions, and in a phonetic layout Russian letters are on different keys. So correction doesn't work there at all: the errors will be not only in punctuation but in the letters themselves.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph4" xml:space="preserve">
+    <value>Punctuation characters that are duplicated on different keys are a separate difficulty. Which character they should be replaced with depends on which physical key was pressed, and the app has no way of knowing that. So for these characters, instead of an exact mapping, it has to guess the direction based on which letters, Russian or English, are closest to the left and right of the character. There's no analysis of the text's meaning here; only neighboring letters matter. There are seven such "contextual" characters: `,` `.` `/` `;` `:` `"` `?`. Digits and the `-`/`=` key are never changed during correction. The key with the question mark, slash, comma, and period is especially finicky. For example, the `/` character has a separate rule for when the matching letters on the left and right are the same distance away: in that case it's left unchanged.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph5" xml:space="preserve">
+    <value>Because the direction for contextual characters is determined by the nearest letters, how the text is spaced can also affect accuracy. If Russian and English text sit side by side in the same sentence, and the spaces around punctuation marks don't follow the rules, correcting a contextual character where those fragments meet may go wrong. For the same reason, if you convert the same text back and forth between layouts several times in a row, errors on ambiguous characters can pile up. For an ordinary one-off correction of a couple of sentences, though, this is rare. After correcting important text, it's worth double-checking its punctuation.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowTitle" xml:space="preserve">
+    <value>Result window</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph1" xml:space="preserve">
+    <value>Sometimes BezBukv decides not to paste the corrected text automatically: the field turned out to be read-only or undetermined, or it's a terminal (more on the reasons in the next section, "Undetermined fields and paste attempts"). In that case, BezBukv opens a separate result window instead. It contains the corrected text itself and three buttons: **"Copy"**, **"Try to paste"**, and a close button.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph2" xml:space="preserve">
+    <value>The **"Copy"** button copies the corrected text to the clipboard. If you only need part of the text, you can select that fragment right in this window, and only that part will be copied.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph3" xml:space="preserve">
+    <value>The **"Try to paste"** button triggers a paste attempt, but it doesn't guarantee the result either. BezBukv can't force the receiving app to paste the text; it only sends a programmatic `Ctrl+V` keystroke. Here too, if you only need part of the text, you can select that fragment.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph4" xml:space="preserve">
+    <value>You can close the window with the X button or the `Escape` key. There's also auto-close. While the cursor is over the window, it stays open. As soon as you move the cursor away, a 5-second timer starts, and when it runs out, the window closes by itself if you don't do anything else with it. If you click the window, auto-close is turned off for good.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph5" xml:space="preserve">
+    <value>If the result shows up in this window rather than being pasted automatically, the previous clipboard contents won't be restored. More on this below, in the clipboard section.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldTitle" xml:space="preserve">
+    <value>Undetermined fields and paste attempts</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph1" xml:space="preserve">
+    <value>Before pasting the corrected text, BezBukv asks the receiving app whether the place where you selected the text can be edited. Receiving apps answer this question differently: some report it clearly, others don't, and some may answer at one moment and stay silent at another. Because of this, the field's status can be one of three: **editable**, **read-only**, or **undetermined**. A field is undetermined when the receiving app simply doesn't report the property needed.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph2" xml:space="preserve">
+    <value>For an editable field, BezBukv does a programmatic paste: it sends the `Ctrl+V` keystroke itself. For a read-only field, no paste happens at all. Such a field physically can't accept text, but there's a second reason as well: if the attempt did somehow succeed, the receiving app might send the text into one of its other fields instead of the one you're looking at. For example, in a messenger, if you selected and are correcting text right in the chat history (which is exactly a read-only field), the "paste" keystroke may still end up in the new message box.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph3" xml:space="preserve">
+    <value>That's exactly why an undetermined field gets the result window by default rather than an automatic paste. Pasting blind into a field that even the app itself couldn't identify risks landing somewhere it shouldn't, and you won't even know. If that doesn't bother you, you can accept the risk knowingly: turn on the **"Try pasting into undetermined fields"** setting on the "Advanced" tab.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph4" xml:space="preserve">
+    <value>It's worth clarifying what "successful" means for a paste. BezBukv can't check whether the text was actually pasted. It only knows that the programmatic `Ctrl+V` keystroke was sent to the receiving app. So "the result window didn't appear" means precisely "a paste attempt was made," not "the text definitely got pasted somewhere." That's why, with **"Try pasting into undetermined fields"** turned on, you may get neither a paste nor a result window.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph5" xml:space="preserve">
+    <value>There's a second option. If a field unexpectedly ends up undetermined, but you know for sure it's normally editable, just use the correction shortcut again. The receiving app may report the right property the second time around. I'd suggest trying it both ways with the apps you use and going with whichever is more convenient and reliable.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph6" xml:space="preserve">
+    <value>There's one reason a paste attempt may fail even in an editable field: a Windows protection mechanism called UIPI. It rejects synthetic input sent to processes with elevated privileges (for example, those run as administrator) and to the secure desktop, meaning the `UAC` prompt, the lock screen, and the sign-in screen.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph7" xml:space="preserve">
+    <value>If paste attempts don't work at all with a particular app, you can copy the text with the **"Copy"** button and paste it by pressing the physical keys, because UIPI blocks programmatic input specifically, not the user's own actions.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph8" xml:space="preserve">
+    <value>Terminals and consoles (`cmd`, PowerShell, Windows Terminal, and the like) are a special case. They have their own shortcuts for copy and paste, and programmatic paste usually doesn't work there. In these apps, BezBukv shows the result window right away instead of trying to paste the text automatically.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionLayoutSwitchTitle" xml:space="preserve">
+    <value>Switching the layout after correction</value>
+  </data>
+  <data name="Settings_Guide_CorrectionLayoutSwitchParagraph1" xml:space="preserve">
+    <value>If **"Switch keyboard layout after correction"** is on, BezBukv switches the system layout after the corrected text is successfully pasted automatically, or after you click **"Try to paste"**. This lets you keep typing in the right language. The layout switches to the language the last character was converted to.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionLayoutSwitchParagraph2" xml:space="preserve">
+    <value>If the matching layout simply isn't installed or Windows couldn't switch to it, the already-corrected text isn't affected. The layout simply stays unchanged, with no error shown.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardTitle" xml:space="preserve">
+    <value>Clipboard: what happens to its contents</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph1" xml:space="preserve">
+    <value>BezBukv works through the clipboard, so during correction it inevitably overwrites whatever was there. To avoid losing those contents, the app takes a snapshot of the current clipboard into its own memory before correcting. After the corrected text is successfully pasted automatically, it puts everything back the way it was.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph2" xml:space="preserve">
+    <value>However, if the correction result ended up in the result window instead of going through an automatic paste attempt, the clipboard isn't restored: the corrected text stays in it. This is intentional. If the clipboard were restored in these cases too, pressing "Try to paste" again would risk pasting the old clipboard contents instead of the corrected text. In practice, this means that in these cases a regular manual paste (`Ctrl+V`) gives you exactly the corrected text, and the previous clipboard contents can't be brought back.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph3" xml:space="preserve">
+    <value>The clipboard snapshot isn't "everything and anything" but a fixed set of formats: text, images (several internal representations plus PNG), HTML, RTF, and a list of file paths. That means the paths, not the contents of the files themselves. This follows from how the clipboard works in Windows itself: its contents aren't stored as a single chunk but as separate formats at the same time. BezBukv, for its part, limits each format separately, to 128 MB, rather than limiting the total size of the whole snapshot. If the clipboard holds something outside the list of formats it saves (for example, a Word or Excel format, or another app's own format), it won't make it into the snapshot and will be lost after restoring. If one of the saved formats exceeds its size limit, only that format is dropped from the snapshot, not everything else.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph4" xml:space="preserve">
+    <value>As mentioned earlier, BezBukv can't reliably tell whether a paste actually happened. All it sees is that the programmatic `Ctrl+V` keystroke was sent. It has no way of knowing what the receiving app and the operating system did with it after that. This uncertainty is exactly why BezBukv's clipboard timings and delays have been tuned. They're described further on, under the "Advanced" tab.</value>
+  </data>
+  <data name="Settings_Guide_HintsTitle" xml:space="preserve">
+    <value>Peek</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewTitle" xml:space="preserve">
+    <value>What Peek is for and how to bring it up</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewParagraph1" xml:space="preserve">
+    <value>BezBukv can show a pop-up card with a mini keyboard: the key you pressed in the center, up to eight neighboring keys around it, and the characters of one or two chosen layouts on the keys. The hint comes in handy if the legends on your keyboard are worn off, the keycaps are missing the markings you need, or you're just learning to touch-type. It shows where the key you need actually is when your finger misses slightly.</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewParagraph2" xml:space="preserve">
+    <value>The card can appear in two ways: while you hold the shortcut, and automatically as you type normally.</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewParagraph3" xml:space="preserve">
+    <value>The **Enable peek** toggle controls the whole feature. When it's off, the Hold Peek shortcut is freed up and Auto Peek stops working. Pausing from the tray turns off both modes regardless of this toggle (more on pausing in the tray icon section above).</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldTitle" xml:space="preserve">
+    <value>Hold Peek</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph1" xml:space="preserve">
+    <value>1. First, choose a keyboard profile and one or two layouts (how to do that is in the next section).</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph2" xml:space="preserve">
+    <value>2. Make sure Peek is enabled and a shortcut is assigned. The default is `Ctrl+F8`.</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph3" xml:space="preserve">
+    <value>3. Hold the shortcut and press the key you want a hint for. The card appears.</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph4" xml:space="preserve">
+    <value>4. While the shortcut is held, BezBukv blocks keystrokes so they don't reach the active app. You can take your time looking at the keyboard without worrying about accidentally triggering anything. The exception is `Escape`: it goes through to the active app as usual.</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph5" xml:space="preserve">
+    <value>5. Release any of the three keys you're holding (either key of the shortcut, or the one shown on the card), and the card disappears and normal input resumes. If you press another key without releasing the shortcut, a new card appears instead. This way you can flip through keys one after another without letting go of the shortcut. This mode doesn't last forever: there's a separate safety timer, controlled by the "Key capture auto-exit" setting. The setting itself is on the "Advanced" tab, but it's closely tied to Peek and calibration, so it's covered in full a bit further on in this section, in the "Keyboard capture safety" subsection.</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph6" xml:space="preserve">
+    <value>To change the shortcut, click **Change**. The recording rules are the same as for the text correction shortcut: `Ctrl` plus one letter, digit, or function key. The **Clear** button removes the assignment during recording. An empty shortcut disables only Hold Peek and frees up that key combination; Auto Peek can keep working independently of it.</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoTitle" xml:space="preserve">
+    <value>Auto Peek and duration</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoParagraph1" xml:space="preserve">
+    <value>The **Auto Peek** toggle shows the same card on every keystroke while you type normally. This mode doesn't block anything: the key you press goes through to the active app as in normal typing. A new keystroke immediately replaces the previous card. You can toggle Auto Peek both on this tab and from the tray menu.</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoParagraph2" xml:space="preserve">
+    <value>The **Auto Peek duration** field sets how long the card stays up before closing in Auto Peek. Zero and negative values aren't accepted. For Auto Peek to work, the main Enable peek toggle must be on, a keyboard profile must be selected, and the app must not be paused.</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoParagraph3" xml:space="preserve">
+    <value>If you type fast enough, the cards may not keep up. That's how this mode works, not a glitch.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileTitle" xml:space="preserve">
+    <value>Keyboard profile and layouts</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph1" xml:space="preserve">
+    <value>Before hints become useful, you need to set up how your keyboard looks on screen. Two different settings handle this: the **keyboard profile**, which is the shape and arrangement of the keys, and the **layouts**, which are the characters shown on them. Don't mix them up: the profile doesn't change the characters, and the layout doesn't change the geometry.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph2" xml:space="preserve">
+    <value>To set the profile, click **Change** in the **Keyboard profile** row. The Choose your keyboard window opens with three options:</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph3" xml:space="preserve">
+    <value>1. **ANSI**: if your keyboard has a wide horizontal `Enter` one row high. This is what the American standard usually looks like.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph4" xml:space="preserve">
+    <value>2. **ISO**: if your `Enter` is tall, two rows high, but there's no extra key between the left `Shift` and `Z`. This isn't the most common **ISO** format worldwide, but it's what keyboards widespread in the CIS and Eastern Europe usually look like.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph5" xml:space="preserve">
+    <value>3. Create your own keyboard: if none of the presets fit. This leads to a separate calibration (see the next section, "Calibrating a custom profile").</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph6" xml:space="preserve">
+    <value>The first two cards in the selection window have no labels: you can only tell them apart by the picture. Even so, this guide calls them ANSI and ISO; otherwise we'd have to describe the key shape in words every time.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph7" xml:space="preserve">
+    <value>After you pick any of the three options, the Choose your layouts window opens. It lists the layouts already installed on your system. You can choose a primary layout and, separately, a secondary one (or leave it at **None** if you only need one set of characters in the hint). If only the primary is selected, its character is shown in the center of the key on the hint card. If both are selected, each character sits in its own position.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph8" xml:space="preserve">
+    <value>Latin characters on the keys are only visible when one of the selected layouts uses Latin characters. The labels of service and navigation keys, such as `Esc`, `Tab`, `Enter`, `Shift`, arrows, function keys, `Insert`, and the like, are always shown in Latin regardless of layout. These are fixed labels of the keys themselves, not characters that change with the layout.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph9" xml:space="preserve">
+    <value>Until a keyboard profile is set, the hint will prompt you to choose a profile instead of showing the usual card. Turning on Auto Peek will also open the selection window.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileTitle" xml:space="preserve">
+    <value>Calibrating a custom profile</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph1" xml:space="preserve">
+    <value>If you chose to create your own keyboard in the Choose your keyboard window and then set the layouts, the Calibrate your keyboard window opens. From that moment until calibration is completed or canceled, all keystrokes are captured. They don't reach other apps or the rest of BezBukv, only the calibration wizard itself.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph2" xml:space="preserve">
+    <value>There are exceptions to this capture. The `Ctrl+Alt+Delete` combination is detected during calibration but not blocked: the system screen (lock the computer, switch user, Task Manager) still opens, and you can use it to abort a stuck calibration. The `Escape` key works differently. It isn't recorded as a normal key; instead it pauses calibration, the same as the "Pause" button in the window itself, and the window doesn't close. This is deliberate, so that `Escape` always remains a way out of capture. If you do need to record the `Escape` key itself in the profile, hover over the **"+"** button (add an empty cell). A separate **"Esc"** button appears next to it; click that one.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph3" xml:space="preserve">
+    <value>The profile is filled in row by row, left to right. You press keys one after another, and they're added to the current row in order. If your keyboard's geometry has a gap without a key, insert an empty cell with the **"+"** button. On the hint, that spot will look like an empty gap.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph4" xml:space="preserve">
+    <value>If you need a key that's wider than normal, press it several times in a row: each press makes it wider. On the hint, such a wide key is displayed under all the keys of the row above that sit over it.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph5" xml:space="preserve">
+    <value>The control buttons at the bottom of the calibration window let you erase the last added cell, reset the whole current row, move on to the next row, pause calibration, cancel it entirely, or confirm and apply the recorded profile. Pause comes in handy if you need to step away and do something else on the computer during calibration. The process is suspended, rows you've already filled in aren't lost, and you can continue calibration later from the same spot.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph6" xml:space="preserve">
+    <value>The characters shown on the profile's keys are taken from the selected OS layouts. If a key on your physical keyboard has no value in the selected layouts, you can still record it; on the hint it will be shown without a label.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph7" xml:space="preserve">
+    <value>Duplicate keys that send the same code are a special case. When you press either of them, the hint shows the key that was recorded in the profile first; the second one isn't shown separately at all. So instead of a duplicate key, it's better to put an empty cell.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyTitle" xml:space="preserve">
+    <value>Keyboard capture safety</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph1" xml:space="preserve">
+    <value>As mentioned in the calibration section, `Escape` isn't recorded as a normal key during calibration but pauses the process instead. This ensures you always have a way to get control of your computer back, even when calibration is capturing all other keystrokes. If for some reason that route doesn't work, there are several more independent ways to break out of capture:</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph2" xml:space="preserve">
+    <value>- **Click the "Pause" button** in the calibration window itself. This stops recording where it is without resetting anything; filled-in rows are kept.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph3" xml:space="preserve">
+    <value>- **Cancel calibration with the "Cancel" button.** This aborts the process completely.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph4" xml:space="preserve">
+    <value>- **Pause the whole app** from the tray icon (left-click the icon). This releases capture not only in calibration but in all other modes too.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph5" xml:space="preserve">
+    <value>- **Close the app completely** from the tray (right-click the icon → "Exit").</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph6" xml:space="preserve">
+    <value>- **Wait for the safety timer to kick in.** How it works is explained below.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph7" xml:space="preserve">
+    <value>While keyboard calibration is running or a Hold Peek hint is on screen, BezBukv captures keystrokes. The **"Key capture auto-exit"** setting on the **Advanced** tab provides the safety net for this. The value is set in seconds: minimum 10 s, default 120 s (2 minutes).</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph8" xml:space="preserve">
+    <value>This setting covers both capture modes but behaves differently in each. In Hold Peek, the timer starts once, the moment you press and hold the shortcut, and from then on counts down without resetting, no matter what you do next. In calibration, on the other hand, the timer resets with every key press, so the countdown always runs from your last action, not from the start of calibration.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph9" xml:space="preserve">
+    <value>When the timer runs out, capture is released unconditionally, whether or not you're still holding the shortcut. After that, keystrokes start reaching the app in focus again, as usual. That's exactly why too small a value is dangerous. Suppose you're holding the shortcut and looking at hints by pressing the keys you're curious about, and the timer runs out in the meantime. Once capture is released, those same keystrokes go straight to whatever app is in focus at that moment. If you don't keep an eye on the timing, this can have unwanted, and sometimes irreversible, consequences in that app.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph10" xml:space="preserve">
+    <value>At the same time, making the value much larger than the default isn't a good idea either. You're extremely unlikely to ever need this emergency exit, but if you do, a very long timer will make you wait for the keyboard to be released far longer than necessary. You could end up in a situation where restarting the computer is the only quick way to get control back.</value>
+  </data>
+  <data name="Settings_Guide_HintsProfileBackupTitle" xml:space="preserve">
+    <value>Don't lose your custom profile</value>
+  </data>
+  <data name="Settings_Guide_HintsProfileBackupParagraph1" xml:space="preserve">
+    <value>If you've calibrated a custom keyboard profile, the **"Reset to defaults"** button (at the bottom of the Settings window) will erase it along with all other settings, and the manually recorded geometry isn't saved separately. So once you've successfully calibrated your keyboard, it's worth doing an **Export** right away to save your settings to a file. That way, you can restore exactly this geometry if needed instead of recording it again from scratch. How import, export, and reset work in general is covered in the "Settings window and common controls" section above.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysTitle" xml:space="preserve">
+    <value>Special cases: Fn and Pause/Break</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph1" xml:space="preserve">
+    <value>Hints behave a little unusually with a couple of keys. This is because of how Windows itself and the keyboard firmware work, not because of the app.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph2" xml:space="preserve">
+    <value>**The `Fn` key** on most keyboards isn't passed to Windows as a regular key. It's usually handled by the keyboard itself or the device controller. For example, when you press `Fn` together with a function key, Windows receives only the resulting event: a volume or brightness change, playback control, and so on.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph3" xml:space="preserve">
+    <value>So a standalone `Fn` press usually can't be detected with standard keyboard capture methods, and the `Fn` key itself isn't taken into account in hints. The exact behavior may differ on individual keyboard models.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph4" xml:space="preserve">
+    <value>**Keys that change their code with a modifier.** Some keys, when pressed together with a modifier (primarily `Ctrl`), send the system a different code than when pressed alone. Custom profile calibration records keys without a modifier (see the section above, "Calibrating a custom profile"). So if the hint is triggered by a `Ctrl` shortcut (Hold Peek), and the key you press is one of these "dual-code" keys, the code that comes in while `Ctrl` is held doesn't match the one recorded during calibration. As a result, the hint for that key may not show up in Hold Peek.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph5" xml:space="preserve">
+    <value>The only such key known at the moment is **`Pause`/`Break`**. The `Pause` key pressed on its own and the `Ctrl+Pause` combination, which the system itself turns into `Break`, produce different codes. Hence:</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph6" xml:space="preserve">
+    <value>- in Hold Peek built on `Ctrl` (for example, `Ctrl+F8`), the hint for the `Pause` key won't appear;</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph7" xml:space="preserve">
+    <value>- in Auto Peek, where `Ctrl` isn't involved, `Pause` works as usual.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph8" xml:space="preserve">
+    <value>So this isn't a recognition error but the system substituting `Break` for `Ctrl+Pause`. The `Pause` key itself is still visible as a neighbor on another key's hint card, even when its own hint doesn't work in Hold Peek.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesTitle" xml:space="preserve">
+    <value>Key categories</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph1" xml:space="preserve">
+    <value>Two toggles decide which keys get a hint at all.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph2" xml:space="preserve">
+    <value>**Show the number row** covers the top-row keys with digits (digits `0`–`9` and the `-`/`=` keys). When it's off, no card appears when you press a number key itself. If you press a neighboring key, though, the number key is still visible: the toggle only hides the hint for the key you pressed. The tilde/"Ё" key isn't part of this category and is always shown regardless of the toggle. Digits on the numeric keypad (Numpad) are never shown, under any settings.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph3" xml:space="preserve">
+    <value>**Show service keys** covers function keys, modifiers (`Ctrl`, `Alt`, `Shift`, and others), `Space`, `Enter`, `Tab`, `Backspace`, and navigation and editing keys (arrows, `Insert`, `Delete`, `Home`, `End`, `Page Up`, `Page Down`, and the like). When it's off, no hint is shown for them, with the same caveat: they're always visible as neighbors on another key's card.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph4" xml:space="preserve">
+    <value>Both toggles only control whether the card is shown for the corresponding category. They don't affect keystroke blocking. In Hold Peek, all keys except `Escape` are still captured regardless of what's turned off here. Auto Peek, on the other hand, never blocks anything.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceTitle" xml:space="preserve">
+    <value>Hint appearance</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph1" xml:space="preserve">
+    <value>Three more settings control how the hint looks on screen.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph2" xml:space="preserve">
+    <value>**Animate the hint** makes the card fade in and out smoothly; when it's off, the card appears and disappears instantly. The effect of the animation is small. If you're just learning to touch-type and type slowly, it may make things more comfortable. If you already type fast and want to see the card instantly, you can turn it off.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph3" xml:space="preserve">
+    <value>**Opacity** ranges from 20% to 100%. A lower value makes the card more transparent and less noticeable on screen; a higher one makes it more visible.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph4" xml:space="preserve">
+    <value>**Scale** ranges from 50% to 200%. A lower value makes the whole on-screen keyboard more compact; a higher one makes it bigger.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph5" xml:space="preserve">
+    <value>While you drag the opacity and scale sliders, a live preview of the card appears on top of the Settings window. This way you can pick values that keep the hint from getting in the way of what you're typing while staying readable.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionTitle" xml:space="preserve">
+    <value>Where the hint appears</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph1" xml:space="preserve">
+    <value>The hint card tries to appear close to where you're typing without covering the text itself. To do this, BezBukv asks the receiving app (the one currently in focus) for the coordinates of the caret, the text input cursor.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph2" xml:space="preserve">
+    <value>Different apps report these coordinates differently, and some don't report them at all. In that case, the hint falls back to the bottom-right corner.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph3" xml:space="preserve">
+    <value>This can also happen at a line break and when typing the first or last character in a line. If the app can't report the coordinates at that moment, the hint may also go to the fallback corner. If the app does report some coordinates nearby, the hint is placed next to the neighboring, already typed character.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph4" xml:space="preserve">
+    <value>These jumps aren't caused by a bug in BezBukv but by how differently receiving apps report the cursor position.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedTitle" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph1" xml:space="preserve">
+    <value>The **Advanced** tab collects the app's delays and safety limits. It's usually best to leave them as they are: the values have already been tuned and work reliably even on a slow computer. Increasing a delay can help if the receiving app responds slowly, but it will make BezBukv wait longer at that step. Too small a value, on the other hand, increases the risk that copying or pasting won't have time to finish. Only change these settings if you've run into a specific problem; the option to tweak them is there on purpose for advanced users.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph2" xml:space="preserve">
+    <value>The default values were tested on slow computers under load: a simultaneous stress test of the CPU, RAM, and hard drive, a paging file on an HDD, and the clipboard being artificially held open. Under these conditions, the default settings worked reliably with no failures. If your computer is even slower than that, you'll most likely have bigger worries than BezBukv, namely whether you can work on that machine at all.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph3" xml:space="preserve">
+    <value>All numeric fields on this tab behave the same way. The value is saved as soon as you press `Enter`, leave the field, or close the Settings window. If you enter something that isn't a number, zero, a negative value, or a number outside the allowed range, the field is highlighted in red and reverts to the last valid value. One of the fields on this tab, maximum text size, displays its value with a separate "K" label. This is a multiplier of a thousand: the number and the "chars" unit refer to thousands of characters, not single characters (more on this in the description of that setting below).</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph4" xml:space="preserve">
+    <value>The settings related to correcting text typed in the wrong layout follow in order. One more setting on this tab, "Key capture auto-exit", relates to Peek and keyboard calibration rather than to text correction. It's already covered above, in the "Peek → Keyboard capture safety" section, and isn't repeated here.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitTitle" xml:space="preserve">
+    <value>Copy timeout</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph1" xml:space="preserve">
+    <value>After you press the correction shortcut, BezBukv performs a programmatic copy (`Ctrl+C`) itself, placing the selected text on the clipboard. **Copy timeout** is how many milliseconds the app is willing to wait for the text to actually show up in the clipboard before giving up. The default is 500 ms; the value can be any positive integer.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph2" xml:space="preserve">
+    <value>Here's why waiting makes sense. Putting a small amount of text into the clipboard usually takes a negligible amount of time, typically well under a millisecond. The main unpredictable delay happens earlier, while the target app processes the copy command and prepares the data. On top of that, the clipboard may be busy at that moment, for example because some other app is reading data from it. BezBukv works around such locks by retrying (more on this below, in the section on restoring the clipboard). The copy timeout covers exactly this time.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph3" xml:space="preserve">
+    <value>If the timeout expires and the clipboard is still empty, the app stops trying and reports that nothing was selected. If something shows up in the clipboard but it isn't text, the app reports an error saying the selection isn't text, and also stops waiting.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph4" xml:space="preserve">
+    <value>The default half second is almost always more than enough: in tests on a slow computer, copying finished within this timeout in every run. It's worth increasing this value if the receiving app is slow and can't hand over the selection in the allotted time. If the selected text never reaches the clipboard at all, the issue is most likely something other than the timeout.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeTitle" xml:space="preserve">
+    <value>Maximum text size</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeParagraph1" xml:space="preserve">
+    <value>**Maximum text size** limits how long a fragment BezBukv will agree to correct at all. The value is set in thousands of characters, not bytes or words. Different layouts, languages, and encodings take up different numbers of bytes per character, so the decision was made to measure the number of characters rather than the data size.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeParagraph2" xml:space="preserve">
+    <value>If the selection is over the limit, BezBukv rejects it entirely rather than trimming it to the allowed length. The range is 1 to 1,073,741 thousand characters; the default is 32 thousand. Thirty-two thousand characters is already a fairly large text for everyday work, and in tests this amount was consistently corrected and pasted without problems.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeParagraph3" xml:space="preserve">
+    <value>Lower it if you want to guard against accidentally correcting a huge amount of text.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayTitle" xml:space="preserve">
+    <value>Clipboard restore delay</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph1" xml:space="preserve">
+    <value>When BezBukv automatically pastes corrected text into the receiving app, a countdown starts right after. Before putting back into the clipboard what was there before the correction, the app waits for the **Clipboard restore delay**. The value is a positive integer in milliseconds; the default is 300 ms.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph2" xml:space="preserve">
+    <value>BezBukv only sends the `Ctrl+V` keystroke and can't tell when the receiving app has actually taken the text. Sometimes the keystroke arrives while the app is busy with something else, so the app queues it, although during normal typing this almost never happens. If the old clipboard is restored before the receiving app has actually gone to the clipboard for the corrected text, the app will get whatever was in the clipboard before instead. The delay covers exactly this gap, from sending `Ctrl+V` to the moment the receiving app actually reads the clipboard.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph3" xml:space="preserve">
+    <value>It can also happen that when the delay runs out, the receiving app still has the clipboard open for reading. For that case, BezBukv retries writing up to five times, about 10 ms apart.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph4" xml:space="preserve">
+    <value>Two symptoms point to a delay that's too short. The first is the receiving app occasionally getting the old clipboard contents instead of the corrected text after a correction. The second is the previous clipboard contents not coming back after a correction. If you see either, try increasing the delay, especially if the clipboard is heavily used on your system, with lots of apps running that keep accessing it.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteTitle" xml:space="preserve">
+    <value>Try pasting into undetermined fields</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph1" xml:space="preserve">
+    <value>When this is on, BezBukv also tries to paste into undetermined fields.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph2" xml:space="preserve">
+    <value>As mentioned in the section on undetermined fields, if BezBukv can't tell whether the place where the result will be pasted is editable, the result window opens instead of an automatic paste. This setting is off by default.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph3" xml:space="preserve">
+    <value>If the setting is on and the paste still fails, the result window won't appear. An attempt was made, but its outcome is unknown to the app, so it just doesn't show anything extra. This toggle never applies to terminals and consoles: they always get the result window, regardless of the setting (more on why terminals are handled separately in the section on undetermined fields above).</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph4" xml:space="preserve">
+    <value>The setting is off by default for the following reason. BezBukv has no control over where the pasted text lands in the receiving app, so the paste risks going somewhere you didn't expect, or not working at all. Since the result window won't appear, at best you simply won't have the fallback for pasting the corrected text. At worst, you might expose confidential information in some random field of the receiving app. So only turn this setting on deliberately. First, it makes sense to get some experience with the specific apps you usually work with, for example by pasting manually with the "Try to paste" button in the result window. Only then decide whether you're ready to allow automatic pasting where BezBukv isn't sure of the result.</value>
+  </data>
+  <data name="Settings_General_Title" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Settings_General_Subtitle" xml:space="preserve">
+    <value>Basic app preferences.</value>
+  </data>
+  <data name="Settings_General_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Settings_General_LanguageDescription" xml:space="preserve">
+    <value>Choose the interface language. System follows your Windows language.</value>
+  </data>
+  <data name="Settings_General_LanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Settings_General_LanguageSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Settings_General_LanguageRussian" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="Settings_General_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Settings_General_ThemeDescription" xml:space="preserve">
+    <value>Choose the app theme. System follows your Windows setting.</value>
+  </data>
+  <data name="Settings_General_ThemeSystem" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Settings_General_ThemeLight" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="Settings_General_ThemeDark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Settings_General_StartWithWindows" xml:space="preserve">
+    <value>Start with Windows</value>
+  </data>
+  <data name="Settings_General_StartWithWindowsDescription" xml:space="preserve">
+    <value>Launch BezBukv automatically when you sign in.</value>
+  </data>
+  <data name="Settings_Correction_Title" xml:space="preserve">
+    <value>Layout Correction</value>
+  </data>
+  <data name="Settings_Correction_Subtitle" xml:space="preserve">
+    <value>Select text in the wrong layout and press the shortcut — BezBukv corrects it.
+Works for the English (US) QWERTY ↔ Russian ЙЦУКЕН pair. Errors can occur because characters are duplicated across keys — see the Guide for details.</value>
+  </data>
+  <data name="Settings_Correction_Enable" xml:space="preserve">
+    <value>Correct text in the wrong layout</value>
+  </data>
+  <data name="Settings_Correction_EnableDescription" xml:space="preserve">
+    <value>When turned off, the shortcut becomes free for other apps.</value>
+  </data>
+  <data name="Settings_Correction_Shortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+  <data name="Settings_Correction_ShortcutDescription" xml:space="preserve">
+    <value>The shortcut that runs correction on the selected text.</value>
+  </data>
+  <data name="Settings_Correction_SwitchLayout" xml:space="preserve">
+    <value>Switch keyboard layout after correction</value>
+  </data>
+  <data name="Settings_Correction_SwitchLayoutDescription" xml:space="preserve">
+    <value>After replacing text, switch the keyboard layout to match, so you keep typing correctly.</value>
+  </data>
+  <data name="Settings_Correction_ResultWindowHint" xml:space="preserve">
+    <value>If you get the result window instead of a paste, see "Undetermined fields and paste attempts" in the Guide.</value>
+  </data>
+  <data name="Settings_Correction_TryPasteUnknown" xml:space="preserve">
+    <value>Try pasting into undetermined fields</value>
+  </data>
+  <data name="Settings_Correction_TryPasteUnknownDescription" xml:space="preserve">
+    <value>The result depends on the receiving app: the paste may fail or land in the wrong place. When off, you get the result window instead.</value>
+  </data>
+  <data name="Settings_Peek_Title" xml:space="preserve">
+    <value>Peek</value>
+  </data>
+  <data name="Settings_Peek_Subtitle" xml:space="preserve">
+    <value>Hold the shortcut and press keys to see the symbols on them and on nearby keys. Handy if your keyboard is missing the right legends, or you're learning to type without looking.</value>
+  </data>
+  <data name="Settings_Peek_Enable" xml:space="preserve">
+    <value>Enable peek</value>
+  </data>
+  <data name="Settings_Peek_EnableDescription" xml:space="preserve">
+    <value>When turned off, the shortcut becomes free for other apps.</value>
+  </data>
+  <data name="Settings_Peek_Shortcut" xml:space="preserve">
+    <value>Shortcut</value>
+  </data>
+  <data name="Settings_Peek_ShortcutDescription" xml:space="preserve">
+    <value>Hold to show the hint; release to hide. Clearing it frees the shortcut, but Auto Peek keeps working.</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfile" xml:space="preserve">
+    <value>Keyboard profile</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileDescription" xml:space="preserve">
+    <value>Choose the physical keyboard layout used by Peek.</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileAutomationName" xml:space="preserve">
+    <value>Current keyboard profile</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileAnsi" xml:space="preserve">
+    <value>ANSI</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileIso" xml:space="preserve">
+    <value>ISO</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileCustom" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileNotSet" xml:space="preserve">
+    <value>Not set</value>
+  </data>
+  <data name="Settings_Peek_AutoPeek" xml:space="preserve">
+    <value>Auto Peek</value>
+  </data>
+  <data name="Settings_Peek_AutoPeekDescription" xml:space="preserve">
+    <value>Show a hint automatically for each key you type.</value>
+  </data>
+  <data name="Settings_Peek_AutoPeekLinger" xml:space="preserve">
+    <value>Auto Peek duration</value>
+  </data>
+  <data name="Settings_Peek_Animate" xml:space="preserve">
+    <value>Animate the hint</value>
+  </data>
+  <data name="Settings_Peek_AnimateDescription" xml:space="preserve">
+    <value>Fade the hint in and out.</value>
+  </data>
+  <data name="Settings_Peek_Opacity" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="Settings_Peek_OpacityDescription" xml:space="preserve">
+    <value>How opaque the hint is.</value>
+  </data>
+  <data name="Settings_Peek_Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="Settings_Peek_ScaleDescription" xml:space="preserve">
+    <value>Size of the hint overlay.</value>
+  </data>
+  <data name="Settings_Peek_KeyCapture" xml:space="preserve">
+    <value>KEY CATEGORIES</value>
+  </data>
+  <data name="Settings_Peek_CaptureNumberRow" xml:space="preserve">
+    <value>Show the number row</value>
+  </data>
+  <data name="Settings_Peek_CaptureNumberRowDescription" xml:space="preserve">
+    <value>Show hints for keys in the 1–0 row.</value>
+  </data>
+  <data name="Settings_Peek_ShowServiceKeys" xml:space="preserve">
+    <value>Show service keys</value>
+  </data>
+  <data name="Settings_Peek_ShowServiceKeysDescription" xml:space="preserve">
+    <value>Show hints for function, modifier, navigation, and editing keys.</value>
+  </data>
+  <data name="Settings_Hotkey_Control" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="Settings_Hotkey_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="Settings_Hotkey_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="Settings_Hotkey_Meta" xml:space="preserve">
+    <value>Win</value>
+  </data>
+  <data name="Settings_Hotkey_Separator" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="Settings_Hotkey_PeekKey" xml:space="preserve">
+    <value>F8</value>
+  </data>
+  <data name="Settings_ChangeShortcut" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="Settings_Hotkey_RecordingHint" xml:space="preserve">
+    <value>Hold only Ctrl, then press one letter, number, or function key.</value>
+  </data>
+  <data name="Settings_Hotkey_ConflictTooltip" xml:space="preserve">
+    <value>This shortcut is in use. Free it or assign another one.</value>
+  </data>
+  <data name="Settings_Hotkey_RecordingPrompt" xml:space="preserve">
+    <value>Press keys…</value>
+  </data>
+  <data name="Settings_Hotkey_CancelRecording" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Settings_Hotkey_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Settings_Hotkey_NotAssigned" xml:space="preserve">
+    <value>Not assigned</value>
+  </data>
+  <data name="Settings_Hotkey_InvalidCombination" xml:space="preserve">
+    <value>Use only Ctrl plus one letter, number, or function key.</value>
+  </data>
+  <data name="Settings_Hotkey_InternalConflict" xml:space="preserve">
+    <value>That shortcut is already used by Peek. Choose a different shortcut.</value>
+  </data>
+  <data name="Settings_Hotkey_CorrectionConflict" xml:space="preserve">
+    <value>That shortcut is already used by Correction. Choose a different shortcut.</value>
+  </data>
+  <data name="Settings_Hotkey_DiagnosticsConflict" xml:space="preserve">
+    <value>That shortcut is used for diagnostics. Choose a different shortcut.</value>
+  </data>
+  <data name="Settings_Hotkey_CaptureFailed" xml:space="preserve">
+    <value>Keyboard shortcut recording could not be started. Try again.</value>
+  </data>
+  <data name="Settings_Hotkey_Unavailable" xml:space="preserve">
+    <value>That shortcut is already in use, so the change was not saved. Check shortcuts in browsers, IDEs, Office apps, terminals, and Windows, then choose another one.</value>
+  </data>
+  <data name="Settings_Hotkey_RegistrationFailed" xml:space="preserve">
+    <value>That shortcut could not be registered, so the change was not saved.</value>
+  </data>
+  <data name="Settings_Hotkey_RestoreFailed" xml:space="preserve">
+    <value>The new shortcut could not be registered, and the previous shortcut could not be restored. Pause and resume BezBukv or restart it.</value>
+  </data>
+  <data name="Settings_Hotkey_RestoreAfterSaveFailed" xml:space="preserve">
+    <value>Settings could not be saved, and the previous shortcut could not be re-registered. Pause and resume BezBukv or restart it.</value>
+  </data>
+  <data name="Settings_Hotkey_PersistRollbackFailed" xml:space="preserve">
+    <value>The rejected shortcut value could not be rolled back on disk. Pause and resume BezBukv or restart it, then choose a working shortcut.</value>
+  </data>
+  <data name="Settings_Advanced_Title" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Settings_Advanced_Subtitle" xml:space="preserve">
+    <value>Fine-tune timing and safety limits.</value>
+  </data>
+  <data name="Settings_Advanced_Warning" xml:space="preserve">
+    <value>These affect timing and performance. You normally don't need to change them — but if you do, check the Guide first.</value>
+  </data>
+  <data name="Settings_Advanced_CorrectionGroup" xml:space="preserve">
+    <value>CORRECTION</value>
+  </data>
+  <data name="Settings_Advanced_PeekGroup" xml:space="preserve">
+    <value>PEEK</value>
+  </data>
+  <data name="Settings_Advanced_CopyTimeout" xml:space="preserve">
+    <value>Copy timeout</value>
+  </data>
+  <data name="Settings_Advanced_CopyTimeoutDescription" xml:space="preserve">
+    <value>How long to wait for the selected text after the shortcut.</value>
+  </data>
+  <data name="Settings_Advanced_CopyTimeoutValue" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="Settings_Advanced_MaxTextSize" xml:space="preserve">
+    <value>Maximum text size</value>
+  </data>
+  <data name="Settings_Advanced_MaxTextSizeDescription" xml:space="preserve">
+    <value>Selections larger than this are refused.</value>
+  </data>
+  <data name="Settings_Advanced_MaxTextSizeValue" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="Settings_Advanced_ClipboardRestoreDelay" xml:space="preserve">
+    <value>Clipboard restore delay</value>
+  </data>
+  <data name="Settings_Advanced_ClipboardRestoreDelayDescription" xml:space="preserve">
+    <value>Pause before restoring your clipboard after an auto-replace.</value>
+  </data>
+  <data name="Settings_Advanced_ClipboardRestoreDelayValue" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="Settings_Advanced_PeekAutoExit" xml:space="preserve">
+    <value>Key capture auto-exit</value>
+  </data>
+  <data name="Settings_Advanced_PeekAutoExitDescription" xml:space="preserve">
+    <value>Safety timeout that forces an exit from keyboard capture — for example, in Hold Peek or keyboard calibration.</value>
+  </data>
+  <data name="Settings_Advanced_PeekAutoExitValue" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="Settings_Unit_Milliseconds" xml:space="preserve">
+    <value>ms</value>
+  </data>
+  <data name="Settings_Unit_Characters" xml:space="preserve">
+    <value>chars</value>
+  </data>
+  <data name="Settings_Unit_Seconds" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="Settings_Footer_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Settings_Footer_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Settings_Footer_Reset" xml:space="preserve">
+    <value>Reset to defaults</value>
+  </data>
+  <data name="Settings_Load_NewerVersion" xml:space="preserve">
+    <value>Your settings were created by a newer version. The existing file was left unchanged.</value>
+  </data>
+  <data name="Settings_Load_Corrupt" xml:space="preserve">
+    <value>Settings could not be read. Defaults are shown, and the existing file was left unchanged.</value>
+  </data>
+  <data name="Settings_Load_Failed" xml:space="preserve">
+    <value>Settings could not be loaded. Defaults are shown for now.</value>
+  </data>
+  <data name="Settings_Import_DialogTitle" xml:space="preserve">
+    <value>Import settings</value>
+  </data>
+  <data name="Settings_Export_DialogTitle" xml:space="preserve">
+    <value>Export settings</value>
+  </data>
+  <data name="Settings_JsonFileFilter" xml:space="preserve">
+    <value>JSON settings (*.json)|*.json|All files (*.*)|*.*</value>
+  </data>
+  <data name="Settings_Import_NewerVersion" xml:space="preserve">
+    <value>That file was created by a newer version. Your current settings were not changed.</value>
+  </data>
+  <data name="Settings_Import_Corrupt" xml:space="preserve">
+    <value>That settings file could not be read. Your current settings were not changed.</value>
+  </data>
+  <data name="Settings_Import_Failed" xml:space="preserve">
+    <value>Settings could not be imported. Your current settings were not changed.</value>
+  </data>
+  <data name="Settings_Export_Failed" xml:space="preserve">
+    <value>Settings could not be exported. Please try again.</value>
+  </data>
+  <data name="Settings_Reset_Failed" xml:space="preserve">
+    <value>Settings could not be reset. Your current settings were not changed.</value>
+  </data>
+  <data name="Settings_Save_Failed" xml:space="preserve">
+    <value>The setting could not be saved. Your previous value was restored.</value>
+  </data>
+  <data name="Settings_Autostart_ChangeFailed" xml:space="preserve">
+    <value>Start with Windows could not be changed. Your previous value was restored.</value>
+  </data>
+  <data name="Settings_Link_Failed" xml:space="preserve">
+    <value>The link could not be opened. Please try again.</value>
+  </data>
+</root>

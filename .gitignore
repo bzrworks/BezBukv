@@ -1,0 +1,57 @@
+# ---- .NET / build output ----
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+publish/
+[Pp]ublish/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results / packages
+*.dll
+*.exe
+*.pdb
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.artifacts/
+
+# ---- IDE / editors ----
+.vs/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+
+# ---- Test / coverage ----
+[Tt]est[Rr]esult*/
+coverage*.json
+coverage*.xml
+*.coverage
+*.trx
+
+# ---- Installer output (Inno Setup) ----
+installer/Output/
+*.iss.bak
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Local / secrets (none expected — app has no network/secrets) ----
+*.local

@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Tray_Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Tray_Pause" xml:space="preserve">
+    <value>Пауза</value>
+  </data>
+  <data name="Tray_AutoPeek" xml:space="preserve">
+    <value>Автоподсказки</value>
+  </data>
+  <data name="Tray_Exit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="Tray_Tooltip_Paused" xml:space="preserve">
+    <value>{0}&#xA;Приостановлено</value>
+  </data>
+  <data name="Tray_Tooltip_Running" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="Notification_Title" xml:space="preserve">
+    <value>BezBukv</value>
+  </data>
+  <data name="Notification_Welcome" xml:space="preserve">
+    <value>BezBukv работает в фоновом режиме.</value>
+  </data>
+  <data name="Notification_InfoGlyph" xml:space="preserve">
+    <value>i</value>
+  </data>
+  <data name="Notification_WarningGlyph" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="KeyboardProfilePicker_Title" xml:space="preserve">
+    <value>Выбор клавиатуры</value>
+  </data>
+  <data name="KeyboardProfilePicker_LayoutHeading" xml:space="preserve">
+    <value>Выбор раскладок</value>
+  </data>
+  <data name="KeyboardProfilePicker_PrimaryLayout_Header" xml:space="preserve">
+    <value>Основной</value>
+  </data>
+  <data name="KeyboardProfilePicker_SecondaryLayout_Header" xml:space="preserve">
+    <value>Дополнительный</value>
+  </data>
+  <data name="KeyboardProfilePicker_NoSecondaryLayout" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="KeyboardProfilePicker_PrimaryLayout_AutomationName" xml:space="preserve">
+    <value>Основная раскладка клавиатуры</value>
+  </data>
+  <data name="KeyboardProfilePicker_SecondaryLayout_AutomationName" xml:space="preserve">
+    <value>Дополнительная раскладка клавиатуры</value>
+  </data>
+  <data name="KeyboardProfilePicker_Heading" xml:space="preserve">
+    <value>Сравните выделенные клавиши со своей клавиатурой. Выбор можно изменить позже в настройках.</value>
+  </data>
+  <data name="KeyboardProfilePicker_WideEnter_Title" xml:space="preserve">
+    <value>Широкий Enter</value>
+  </data>
+  <data name="KeyboardProfilePicker_TallEnter_Title" xml:space="preserve">
+    <value>Высокий Enter</value>
+  </data>
+  <data name="KeyboardProfilePicker_Custom_Title" xml:space="preserve">
+    <value>Создать пользовательскую клавиатуру</value>
+  </data>
+  <data name="KeyboardProfilePicker_Custom_Tooltip" xml:space="preserve">
+    <value>Создать отпечаток своей клавиатуры</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Tab" xml:space="preserve">
+    <value>Tab</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Q" xml:space="preserve">
+    <value>Q</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Caps" xml:space="preserve">
+    <value>Caps</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_A" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Z" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Backspace" xml:space="preserve">
+    <value>Backspace</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Backslash" xml:space="preserve">
+    <value>\</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Enter" xml:space="preserve">
+    <value>Enter</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_P" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_LeftBracket" xml:space="preserve">
+    <value>[</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_RightBracket" xml:space="preserve">
+    <value>]</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Semicolon" xml:space="preserve">
+    <value>;</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Apostrophe" xml:space="preserve">
+    <value>'</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Period" xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="KeyboardProfilePicker_Key_Slash" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="KeyboardCalibration_Title" xml:space="preserve">
+    <value>Калибровка клавиатуры</value>
+  </data>
+  <data name="KeyboardCalibration_Hint" xml:space="preserve">
+    <value>Нажимайте клавиши слева направо. Чтобы клавиша стала шире, нажимайте её несколько раз.</value>
+  </data>
+  <data name="KeyboardCalibration_Pause" xml:space="preserve">
+    <value>Приостановить</value>
+  </data>
+  <data name="KeyboardCalibration_Resume" xml:space="preserve">
+    <value>Продолжить</value>
+  </data>
+  <data name="KeyboardCalibration_PausedHint" xml:space="preserve">
+    <value>Калибровка приостановлена. Клавиатура доступна. Чтобы продолжить, выберите «Продолжить».</value>
+  </data>
+  <data name="KeyboardCalibration_AddEmptySlot_ToolTip" xml:space="preserve">
+    <value>Добавить пустую ячейку</value>
+  </data>
+  <data name="KeyboardCalibration_AddEscape_Label" xml:space="preserve">
+    <value>Esc</value>
+  </data>
+  <data name="KeyboardCalibration_AddEscape_ToolTip" xml:space="preserve">
+    <value>Добавить сюда клавишу Escape</value>
+  </data>
+  <data name="KeyboardCalibration_Undo_ToolTip" xml:space="preserve">
+    <value>Отменить последнюю ячейку</value>
+  </data>
+  <data name="KeyboardCalibration_ResetRow_ToolTip" xml:space="preserve">
+    <value>Сбросить ряд</value>
+  </data>
+  <data name="KeyboardCalibration_NextRow_ToolTip" xml:space="preserve">
+    <value>Следующий ряд</value>
+  </data>
+  <data name="KeyboardCalibration_Cancel_ToolTip" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="KeyboardCalibration_Finish_ToolTip" xml:space="preserve">
+    <value>Завершить</value>
+  </data>
+  <data name="KeyboardCalibration_InvalidGeometry" xml:space="preserve">
+    <value>Перед завершением добавьте хотя бы одну клавишу.</value>
+  </data>
+  <data name="KeyboardCalibration_CaptureFailed" xml:space="preserve">
+    <value>Не удалось начать калибровку клавиатуры.</value>
+  </data>
+  <data name="Hotkey_Unavailable" xml:space="preserve">
+    <value>{0} ({1}): сочетание уже используется.</value>
+  </data>
+  <data name="Hotkey_RegistrationFailed" xml:space="preserve">
+    <value>{0} ({1}): не удалось зарегистрировать сочетание.</value>
+  </data>
+  <data name="Hotkey_CorrectionFunction" xml:space="preserve">
+    <value>Исправление</value>
+  </data>
+  <data name="Hotkey_PeekFunction" xml:space="preserve">
+    <value>Подсказки</value>
+  </data>
+  <data name="Hotkey_ChangeShortcutHint" xml:space="preserve">
+    <value>Сочетание можно изменить в настройках.</value>
+  </data>
+  <data name="Correction_NothingToConvert" xml:space="preserve">
+    <value>В выделенном тексте нет букв латиницы или кириллицы.</value>
+  </data>
+  <data name="Correction_InputError" xml:space="preserve">
+    <value>Не удалось завершить исправление. Повторите попытку.</value>
+  </data>
+  <data name="FocusedElement_Editable" xml:space="preserve">
+    <value>Доступно</value>
+  </data>
+  <data name="FocusedElement_ReadOnly" xml:space="preserve">
+    <value>Только для чтения</value>
+  </data>
+  <data name="FocusedElement_Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="FocusedElementDiagnostic_Result" xml:space="preserve">
+    <value>Редактирование: {0}; приложение: {1}; терминал: {2}.</value>
+  </data>
+  <data name="ActiveApplication_Unknown" xml:space="preserve">
+    <value>Неизвестно</value>
+  </data>
+  <data name="ActiveApplication_TerminalTrue" xml:space="preserve">
+    <value>да</value>
+  </data>
+  <data name="ActiveApplication_TerminalFalse" xml:space="preserve">
+    <value>нет</value>
+  </data>
+  <data name="ActiveApplication_TerminalUnknown" xml:space="preserve">
+    <value>неизвестно</value>
+  </data>
+  <data name="Result_Title" xml:space="preserve">
+    <value>Исправленная раскладка</value>
+  </data>
+  <data name="Result_CopyButton" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="Result_TryPasteButton" xml:space="preserve">
+    <value>Попробовать вставить — успех не гарантирован</value>
+  </data>
+  <data name="Result_CloseButton" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="Result_SelectionHint" xml:space="preserve">
+    <value>Выделите нужную часть, если весь текст не требуется.</value>
+  </data>
+  <data name="Settings_Title" xml:space="preserve">
+    <value>BezBukv — Настройки</value>
+  </data>
+  <data name="Settings_Close" xml:space="preserve">
+    <value>Закрыть настройки</value>
+  </data>
+  <data name="Settings_Header_SettingsSuffix" xml:space="preserve">
+    <value>— Настройки</value>
+  </data>
+  <data name="Settings_Nav_General" xml:space="preserve">
+    <value>Основные</value>
+  </data>
+  <data name="Settings_Nav_Correction" xml:space="preserve">
+    <value>Исправление</value>
+  </data>
+  <data name="Settings_Nav_Peek" xml:space="preserve">
+    <value>Подсказки</value>
+  </data>
+  <data name="Settings_Nav_Advanced" xml:space="preserve">
+    <value>Дополнительно</value>
+  </data>
+  <data name="Settings_Nav_Guide" xml:space="preserve">
+    <value>Руководство</value>
+  </data>
+  <data name="Settings_About_ProductName" xml:space="preserve">
+    <value>BezBukv</value>
+  </data>
+  <data name="Settings_About_VersionFormat" xml:space="preserve">
+    <value>Версия {0}</value>
+  </data>
+  <data name="Settings_About_SupportDescription" xml:space="preserve">
+    <value>Поддержите рост разработчика.</value>
+  </data>
+  <data name="Settings_About_SourceCode" xml:space="preserve">
+    <value>Исходный код</value>
+  </data>
+  <data name="Settings_About_ReportProblem" xml:space="preserve">
+    <value>Сообщить о проблеме</value>
+  </data>
+  <data name="Settings_About_SupportButton" xml:space="preserve">
+    <value>Поддержать проект</value>
+  </data>
+  <data name="Settings_Guide_Title" xml:space="preserve">
+    <value>Руководство</value>
+  </data>
+  <data name="GuideWindow_Title" xml:space="preserve">
+    <value>BezBukv — Руководство</value>
+  </data>
+  <data name="Settings_Guide_OpenWindowToolTip" xml:space="preserve">
+    <value>Открыть в отдельном окне</value>
+  </data>
+  <data name="Settings_Guide_IntroductionParagraph1" xml:space="preserve">
+    <value>BezBukv — ваш клавиатурный ассистент. Он живёт в области уведомлений, никак себя не навязывает и выручает, когда с клавиатурой что-то пошло не так.</value>
+  </data>
+  <data name="Settings_Guide_IntroductionParagraph2" xml:space="preserve">
+    <value>Набрали абзац не в той раскладке? Выделите его и нажмите сочетание клавиш: текст будет исправлен между английской (US) и русской раскладками, а при желании раскладка сама переключится, и вы продолжите печатать как нужно. Для этого не нужны интернет и нейросети, всё делается по встроенным таблицам прямо на вашем компьютере, и ничего никуда не отправляется.</value>
+  </data>
+  <data name="Settings_Guide_IntroductionParagraph3" xml:space="preserve">
+    <value>А ещё BezBukv умеет подсказывать клавиши. Стёрлась гравировка? Не хватает нужной раскладки на клавишах? Осваиваете слепую печать? Карточка на экране покажет, где нужная клавиша, чтобы не искать её глазами на клавиатуре.</value>
+  </data>
+  <data name="Settings_Guide_TrayTitle" xml:space="preserve">
+    <value>Значок и меню трея</value>
+  </data>
+  <data name="Settings_Guide_TrayOverviewParagraph" xml:space="preserve">
+    <value>Главного окна у BezBukv нет, всё управление происходит через значок в области уведомлений. Правый клик по значку открывает меню, левый — включает или снимает паузу.</value>
+  </data>
+  <data name="Settings_Guide_TrayMenuIntro" xml:space="preserve">
+    <value>В меню четыре пункта:</value>
+  </data>
+  <data name="Settings_Guide_TrayPauseParagraph" xml:space="preserve">
+    <value>**Пауза** приостанавливает работу BezBukv: перестают срабатывать назначенные сочетания клавиш (исправление текста, подсказка при удержании) и отключается отслеживание нажатий для автоподсказок. Пауза действует до перезапуска приложения или снятия вручную. Когда работа приостановлена, значок становится серым. Удобные случаи для паузы: временно освободить сочетания клавиш для другой программы; быстро отключить подсказки на время ввода пароля.</value>
+  </data>
+  <data name="Settings_Guide_TrayAutoHintsParagraph" xml:space="preserve">
+    <value>**Автоподсказки** включает подсказки о нажатых клавишах прямо во время набора текста. Способы вызова подсказок подробно разбираются в разделе «Подсказки».</value>
+  </data>
+  <data name="Settings_Guide_TraySettingsParagraph" xml:space="preserve">
+    <value>**Настройки** открывает окно настроек.</value>
+  </data>
+  <data name="Settings_Guide_TrayExitParagraph" xml:space="preserve">
+    <value>**Выход** полностью закрывает BezBukv.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowTitle" xml:space="preserve">
+    <value>Окно настроек и общие элементы</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowOverviewParagraph" xml:space="preserve">
+    <value>Слева — список вкладок, справа — их параметры. Крестик в углу и клавиша `Escape` закрывают только окно настроек — сам BezBukv продолжает работать в фоне.</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsTitle" xml:space="preserve">
+    <value>Что стоит знать сразу</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph1" xml:space="preserve">
+    <value>Настройки применяются на лету. Изменили параметр, и он уже работает: ничего подтверждать, сохранять или перезапускать не нужно. Поэтому настройки можно спокойно пробовать и сразу смотреть, что получилось.</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph2" xml:space="preserve">
+    <value>Если вместо вставки у вас часто открывается окно результата, скорее всего, причина в поведении по умолчанию: BezBukv не вставляет исправленный текст в поля, которые не определились однозначно как редактируемые. Это осознанный выбор в пользу контроля над тем, куда попадает текст. Вставку в такие поля можно включить, и во многих приложениях она работает. Как это устроено и где включить, описано в разделе «Неопределённое поле и попытка вставки».</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph3" xml:space="preserve">
+    <value>Если нужно исключить любое участие BezBukv при нажатии клавиш, например отображение подсказок во время ввода пароля, или освободить зарегистрированные сочетания клавиш, приложение можно поставить на паузу.</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph4" xml:space="preserve">
+    <value>Если сочетание, назначенное BezBukv, к моменту запуска уже занято другим приложением, вы увидите предупреждение, а само это сочетание перехватываться не будет — соответствующая функция (исправление или подсказки) автоматически отключится. В окне настроек рядом с сочетанием клавиш, которое не удалось зарегистрировать, появляется значок предупреждения. При обычном запуске без конфликтов вместо этого показывается короткое уведомление «BezBukv работает в фоновом режиме».</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph5" xml:space="preserve">
+    <value>Приложение работает через буфер обмена, при этом если в буфере было что-то до его вызова, оно попытается сохранить содержимое и восстановить его после работы (подробнее в разделе про буфер обмена).</value>
+  </data>
+  <data name="Settings_Guide_ImmediateFactsParagraph6" xml:space="preserve">
+    <value>При исправлении знаков препинания, которые стоят на разных клавишах в разных раскладках, направление определяется по соседним буквам. Ответственные тексты лучше просматривать после исправления.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph1" xml:space="preserve">
+    <value>Три кнопки внизу:</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph2" xml:space="preserve">
+    <value>**Импорт** предлагает выбрать файл настроек в формате JSON: успешный импорт заменяет весь сохранённый набор настроек целиком, а не сливает его с текущим. Повреждённый файл текущие настройки не заменит. Если сочетания клавиш, указанные в импортируемом файле, окажутся заняты, BezBukv не сможет их зарегистрировать в ОС и соответствующие функции отключатся с предупреждением, но остальные настройки из файла всё равно применятся.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph3" xml:space="preserve">
+    <value>**Экспорт** сохраняет весь текущий набор настроек в выбранный JSON-файл целиком — удобно сделать перед переносом настроек на другой компьютер или перед сбросом.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph4" xml:space="preserve">
+    <value>**Сбросить настройки** возвращает сохранённые параметры к значениям по умолчанию, без подтверждения, так что если текущая настройка может понадобиться позже, лучше сначала её экспортировать.</value>
+  </data>
+  <data name="Settings_Guide_SettingsWindowParagraph5" xml:space="preserve">
+    <value>Параметром **Запускать вместе с Windows** управляет собственный переключатель на вкладке «Основные» — ни импорт, ни сброс его не трогают.</value>
+  </data>
+  <data name="Settings_Guide_GeneralTitle" xml:space="preserve">
+    <value>Основные</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph1" xml:space="preserve">
+    <value>Вкладка **«Основные»** отвечает за интерфейс и запуск приложения.</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph2" xml:space="preserve">
+    <value>**Язык** переключается между Системным, Английским и Русским. В режиме «Системный» BezBukv следует языку Windows; переводы пока есть только на английский и русский, поэтому если системный язык не входит в эту пару, используется английский.</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph3" xml:space="preserve">
+    <value>**Тема** — Системная, Светлая или Тёмная — применяется ко всем окнам приложения. «Системная» следует за темой Windows и меняется вместе с ней; два других варианта фиксируют выбранное оформление независимо от системной.</value>
+  </data>
+  <data name="Settings_Guide_GeneralParagraph4" xml:space="preserve">
+    <value>**Запускать вместе с Windows** добавляет BezBukv в автозапуск при входе в вашу учётную запись. Технически это запись в реестре с путём к исполняемому файлу, и если Windows почему-то не дала внести это изменение, переключатель вернётся в прежнее положение, а BezBukv покажет предупреждение.</value>
+  </data>
+  <data name="Settings_Guide_LayoutCorrectionTitle" xml:space="preserve">
+    <value>Исправление раскладки</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyTitle" xml:space="preserve">
+    <value>Как исправлять текст и настроить сочетание клавиш</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyParagraph1" xml:space="preserve">
+    <value>Чтобы исправить текст, набранный в неправильной раскладке, выделите его и один раз нажмите сочетание клавиш, указанное в настройках: по умолчанию это `Ctrl+F7`. BezBukv забирает выделенное, преобразует его и решает, куда вернуть результат — это зависит от того, какое свойство имеет поле с текстом (подробнее о трёх типах поля и логике выбора — ниже, в разделе про неопределённое поле). Если поле можно редактировать, исправленный текст вставится на место старого автоматически; но эта вставка идёт через принимающее приложение, поэтому гарантировать её успех BezBukv не может.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyParagraph2" xml:space="preserve">
+    <value>Переключатель **Исправлять текст в неправильной раскладке** включает и выключает всю функцию целиком. При выключении сочетание клавиш освобождается — им может пользоваться другая программа. При включении приложение пытается зарегистрировать сочетание заново; если оно уже занято, вы увидите предупреждение и BezBukv не станет отбирать его у другой программы.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionHotkeyParagraph3" xml:space="preserve">
+    <value>Чтобы изменить сочетание, нажмите **Изменить** и, удерживая только `Ctrl`, нажмите одну букву `A`–`Z`, цифру `0`–`9` или функциональную клавишу `F1`–`F24`. Два модификатора сразу, например `Ctrl+Shift`, на данный момент не поддерживаются. Если новое сочетание допустимо и свободно, оно применяется сразу же; занятое или конфликтующее с сочетанием другой функции приложения отклоняется, а прежнее сочетание продолжает работать как прежде. Во время записи рядом появляется кнопка **Очистить** — она снимает назначение и освобождает сочетание совсем, так что запустить исправление с клавиатуры станет нельзя, пока не будет назначено новое. Кнопка **Отмена**, клавиша `Escape`, потеря окном фокуса обрывают запись без изменений. Сочетание клавиш для исправления от раскладки не зависит: оно привязано к физической клавише, а не к языку.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorTitle" xml:space="preserve">
+    <value>Как работает исправление и на что оно рассчитано</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph1" xml:space="preserve">
+    <value>Поддерживаемая пара — именно **US-English ↔ русская ЙЦУКЕН**. Всё остальное в неё не входит, и разница бывает двух видов.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph2" xml:space="preserve">
+    <value>Если английская раскладка не US (например, UK-English), точность исправления не гарантируется. Буквы у таких раскладок стоят так же, как в US, и конвертируются верно, а вот знаки вроде `"`, `@`, `#`, `~`, `\` расположены по-разному, тогда как приложение рассчитано именно на US-расположение.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph3" xml:space="preserve">
+    <value>Если русская раскладка не ЙЦУКЕН, а фонетическая («ЯВЕРТ»-тип, где русские буквы стоят по созвучию с латинскими), дело хуже: таблица приложения построена по позициям клавиш ЙЦУКЕН, а в фонетической раскладке русские буквы стоят на других клавишах. Поэтому исправление там не подходит вообще: ошибки будут не только в пунктуации, но и в самих буквах.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph4" xml:space="preserve">
+    <value>Отдельная сложность — с символами пунктуации, продублированными на разных клавишах. То, каким символом их нужно заменить, зависит от того, какая из физических клавиш была нажата, а этого приложение узнать не может. Поэтому для таких символов вместо точного соответствия ему приходится угадывать направление — по тому, какие буквы, русские или английские, находятся ближе слева и справа от знака. Анализа смысла текста при этом нет, важно только соседство букв. Таких «контекстных» символов семь: `,` `.` `/` `;` `:` `"` `?` — цифры и клавиша `-`/`=` при исправлении не меняются никогда. Особенно капризна клавиша со знаками вопроса, слеша, запятой и точки: например, у символа `/` есть отдельное правило на случай, когда подходящие буквы слева и справа находятся на одинаковом расстоянии: тогда он остаётся без изменений.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionBehaviorParagraph5" xml:space="preserve">
+    <value>Из-за того что направление для контекстных символов определяется по ближайшим буквам, на точность может повлиять и то, как расставлен текст. Если в одном предложении соседствуют русский и английский текст, а пробелы вокруг знаков препинания расставлены не по правилам, — на стыке таких фрагментов исправление контекстного символа может ошибиться. По той же причине, если один и тот же текст несколько раз подряд переводить туда и обратно между раскладками, ошибка на неоднозначных символах может накапливаться — хотя для обычного разового исправления пары предложений это редкость. После исправления ответственных текстов пунктуацию в них стоит перепроверить.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowTitle" xml:space="preserve">
+    <value>Окно результата</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph1" xml:space="preserve">
+    <value>Если исправленный текст решено не вставлять автоматически — поле оказалось только для чтения, неопределённым, или речь идёт о терминале (подробнее о причинах в следующем разделе, «Неопределённое поле и попытка вставки») — BezBukv вместо автовставки открывает отдельное окно результата. В нём — сам исправленный текст и три кнопки: **«Копировать»**, **«Попробовать вставить»** и кнопка закрытия.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph2" xml:space="preserve">
+    <value>Кнопка **«Копировать»** копирует исправленный текст в буфер обмена. Если нужен не весь текст, а его часть, можно выделить нужный фрагмент прямо в этом окне — тогда скопируется только он.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph3" xml:space="preserve">
+    <value>Кнопка **«Попробовать вставить»** инициирует попытку вставки, но тоже не гарантирует результат: BezBukv не может заставить принимающее приложение вставить текст, он лишь отправляет программное нажатие `Ctrl+V`. Здесь также, если нужен не весь текст, можно выделить нужный фрагмент.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph4" xml:space="preserve">
+    <value>Закрыть окно можно кнопкой-крестиком или клавишей `Escape`. Есть и автозакрытие: пока курсор наведён на окно, оно остаётся открытым; как только курсор убрать, запускается таймер на 5 секунд, и по его истечении окно закроется само, если с ним больше ничего не делать. Если по окну кликнуть, автозакрытие отключается насовсем.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionResultWindowParagraph5" xml:space="preserve">
+    <value>Если результат появился в этом окне, а не был вставлен автоматически, прежнее содержимое буфера обмена уже не восстановится. Подробнее об этом в разделе про буфер обмена, ниже.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldTitle" xml:space="preserve">
+    <value>Неопределённое поле и попытка вставки</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph1" xml:space="preserve">
+    <value>Перед вставкой исправленного текста BezBukv спрашивает у принимающего приложения, можно ли редактировать место, где вы выделили текст. И принимающие приложения отвечают на этот вопрос по-разному: одни сообщают чётко, другие — нет, а некоторые могут в один момент ответить, а в другой — промолчать. Из-за этого статус поля может оказаться одним из трёх: **редактируемое**, **только для чтения** или **неопределённое** — когда принимающее приложение просто не сообщает нужное свойство.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph2" xml:space="preserve">
+    <value>Для редактируемого поля BezBukv делает программную вставку — сам отправляет нажатие `Ctrl+V`. Для поля только для чтения вставка не делается вообще: оно физически не может принять текст, но есть и вторая причина: если бы попытка всё-таки завершилась успехом, принимающее приложение могло бы направить текст не туда, куда вы смотрите, а в какое-то другое своё поле. Например, в мессенджере, если вы выделили и исправляете текст прямо в переписке (это как раз поле только для чтения), нажатие «вставить» всё равно может попасть в поле для нового сообщения.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph3" xml:space="preserve">
+    <value>Именно поэтому для неопределённого поля по умолчанию открывается окно результата, а не автоматическая вставка: вставка вслепую в поле, которое даже сама программа не смогла опознать, рискует попасть куда-то не туда — а вы об этом даже не узнаете. Если вас это не смущает, риск можно принять осознанно: включить параметр **«Пробовать вставку в неопределённые поля»** на вкладке «Дополнительно».</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph4" xml:space="preserve">
+    <value>Здесь стоит оговорить, что для вставки значит «успешно». BezBukv не может проверить, вставился ли текст на самом деле, он знает только, что программное нажатие `Ctrl+V` было отправлено в принимающее приложение. Поэтому «окно результата не появилось» означает именно «попытка вставки была сделана», а не «текст точно куда-то вставился». Поэтому при включённом **«Пробовать вставку в неопределённые поля»** вы можете не получить ни вставки, ни окна с результатом.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph5" xml:space="preserve">
+    <value>Есть второй вариант: если поле неожиданно оказалось в неопределённом состоянии, но вы точно знаете, что оно обычно редактируется, просто ещё раз используйте сочетание исправления — возможно, принимающее приложение отдаст правильное свойство со второго раза. Советую поработать в своём стеке приложений и так и так и выбирать, что удобнее и стабильнее.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph6" xml:space="preserve">
+    <value>Есть причина, по которой попытка вставки может не сработать даже в редактируемом поле, — это защита Windows под названием UIPI: она отклоняет синтетический ввод для процессов с повышенными правами (например, запущенных от имени администратора) и для защищённого рабочего стола — экрана `UAC`, экрана блокировки и входа в систему.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph7" xml:space="preserve">
+    <value>Если попытка вставить вообще никак не работает с конкретным приложением, можно скопировать текст кнопкой **«Копировать»** и вставить его нажатием физических клавиш, потому что UIPI блокирует именно программный ввод, а не действия самого пользователя.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionUnknownFieldParagraph8" xml:space="preserve">
+    <value>Отдельный случай — терминалы и консоли (`cmd`, PowerShell, Windows Terminal и им подобные): там свои сочетания клавиш для копирования и вставки, и программная вставка там обычно не срабатывает. В таких приложениях BezBukv сразу показывает окно результата, а не пытается вставить текст автоматически.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionLayoutSwitchTitle" xml:space="preserve">
+    <value>Переключение раскладки после исправления</value>
+  </data>
+  <data name="Settings_Guide_CorrectionLayoutSwitchParagraph1" xml:space="preserve">
+    <value>Если включено **«Переключать раскладку клавиатуры после исправления»**, после успешной автоматической вставки исправленного текста или после нажатия кнопки **«Попробовать вставить»** BezBukv переключит системную раскладку, чтобы можно было продолжить печатать уже на нужном языке. Раскладка переключается на тот язык, к которому шло направление преобразования последнего символа.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionLayoutSwitchParagraph2" xml:space="preserve">
+    <value>Если подходящей раскладки в системе просто нет или Windows не смогла её переключить, сам уже исправленный текст от этого не меняется — переключение молча не происходит, без ошибок.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardTitle" xml:space="preserve">
+    <value>Буфер обмена: что происходит с его содержимым</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph1" xml:space="preserve">
+    <value>BezBukv работает через буфер обмена, поэтому в момент исправления неизбежно затирает то, что там было. Чтобы не терять это содержимое, перед исправлением приложение снимает копию текущего буфера в собственную память — и после успешной автоматической вставки исправленного текста возвращает всё как было.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph2" xml:space="preserve">
+    <value>А вот если результат исправления вместо попытки вставить автоматически попал в окно результата, буфер обмена не восстанавливается: в нём так и остаётся исправленный текст. Это сделано специально: если бы буфер восстанавливался и в этих случаях, повторное нажатие «Попробовать вставить» рисковало бы подставить прежнее содержимое буфера вместо исправленного текста. Практическое следствие: после этих случаев обычная ручная вставка (`Ctrl+V`) даст именно исправленный текст, а прежнее содержимое буфера уже не вернуть.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph3" xml:space="preserve">
+    <value>Снимок буфера — это не «всё подряд», а фиксированный набор форматов: текст, изображения (несколько внутренних представлений плюс PNG), HTML, RTF и список путей к файлам — именно путей, а не содержимого самих файлов. Так буфер обмена устроен в самой Windows: содержимое в нём хранится не одним куском, а отдельными форматами одновременно. BezBukv же со своей стороны ограничивает каждый формат по отдельности — до 128 МБ, а не общий объём снимка целиком. Если в буфере оказалось что-то вне списка захватываемых форматов (например, формат Word или Excel, или свой формат другого приложения), оно в снимок не попадёт и после восстановления будет потеряно. Если же один из захваченных форматов превышает свой предел по объёму, из снимка выпадает только он, а не всё остальное.</value>
+  </data>
+  <data name="Settings_Guide_CorrectionClipboardParagraph4" xml:space="preserve">
+    <value>Как ранее уже упоминалось, BezBukv не может достоверно узнать, состоялась ли вставка на самом деле. Он видит только, что программное нажатие `Ctrl+V` было отправлено, — а что с ним дальше сделало принимающее приложение и операционная система, ему знать не дано. Именно из-за этой неопределённости в самом BezBukv подобраны тайминги и задержки при работе с буфером — они описаны дальше, на вкладке «Дополнительно».</value>
+  </data>
+  <data name="Settings_Guide_HintsTitle" xml:space="preserve">
+    <value>Подсказки</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewTitle" xml:space="preserve">
+    <value>Назначение подсказок и способы вызова</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewParagraph1" xml:space="preserve">
+    <value>BezBukv может показывать всплывающую карточку с мини-клавиатурой: в центре нажатая клавиша, вокруг — до восьми соседних, на клавишах — символы одной или двух выбранных раскладок. Подсказка выручает, если на клавиатуре стёрлись обозначения, не хватает нужной гравировки или вы только осваиваете слепую печать: видно, где на самом деле находится нужная клавиша, если палец немного промахнулся.</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewParagraph2" xml:space="preserve">
+    <value>Карточка может появляться двумя способами: при удержании сочетания клавиш и автоматически при обычном наборе.</value>
+  </data>
+  <data name="Settings_Guide_HintsOverviewParagraph3" xml:space="preserve">
+    <value>Переключатель **Включить подсказки** управляет функцией целиком. При выключении освобождается сочетание для режима удержания и перестают работать автоподсказки. Пауза из трея отключает оба режима, независимо от этого переключателя (подробнее о паузе — в разделе про значок в трее, выше).</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldTitle" xml:space="preserve">
+    <value>Подсказка при удержании</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph1" xml:space="preserve">
+    <value>1. Сначала выберите профиль клавиатуры и одну или две раскладки (как это сделать — в следующем разделе).</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph2" xml:space="preserve">
+    <value>2. Убедитесь, что подсказки включены и назначено сочетание клавиш. По умолчанию — `Ctrl+F8`.</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph3" xml:space="preserve">
+    <value>3. Удерживайте сочетание и нажмите клавишу, для которой нужна подсказка, — появится карточка.</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph4" xml:space="preserve">
+    <value>4. Пока сочетание удерживается, BezBukv блокирует нажатия клавиш, чтобы они не попадали в активное приложение, — можно спокойно разглядывать клавиатуру, не опасаясь случайно что-то запустить. Исключение — `Escape`: она проходит в активное приложение как обычно.</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph5" xml:space="preserve">
+    <value>5. Отпустите любую из трёх удерживаемых клавиш (обе клавиши сочетания или ту, что показана на карточке) — карточка скроется, обычный ввод продолжится. Если вместо этого, не отпуская сочетание, нажать другую клавишу, появится новая карточка — так можно пролистывать клавиши одну за другой, не отпуская сочетания. Бесконечно этот режим не длится: есть отдельный страховочный таймер — им управляет параметр «Автовыход из перехвата клавиш» (физически он находится на вкладке «Дополнительно», но по смыслу тесно связан с подсказками и калибровкой, поэтому целиком разобран чуть дальше в этом же разделе, в подразделе «Безопасность перехвата клавиатуры»).</value>
+  </data>
+  <data name="Settings_Guide_HintsHoldParagraph6" xml:space="preserve">
+    <value>Чтобы сменить сочетание, нажмите **Изменить** — правила записи те же, что и для сочетания исправления текста: `Ctrl` и одна буква, цифра или функциональная клавиша. Кнопка **Очистить** во время записи снимает назначение. Пустое сочетание отключает только режим удержания и освобождает эту комбинацию клавиш; автоподсказки при этом могут продолжать работать независимо от него.</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoTitle" xml:space="preserve">
+    <value>Автоподсказки и длительность</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoParagraph1" xml:space="preserve">
+    <value>Переключатель **Автоподсказки** включает показ той же карточки при каждом нажатии во время обычного набора. Этот режим ничего не блокирует: нажатая клавиша передаётся в активное приложение как при обычной печати. Новое нажатие сразу заменяет предыдущую карточку. Автоподсказки можно переключать как на этой вкладке, так и из меню трея.</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoParagraph2" xml:space="preserve">
+    <value>Поле **Длительность автоподсказки** меняет время до закрытия карточки при автоподсказке. Ноль и отрицательные значения не принимаются. Для работы автоподсказок должен быть включён общий тумблер Подсказки, выбран профиль клавиатуры и снята пауза.</value>
+  </data>
+  <data name="Settings_Guide_HintsAutoParagraph3" xml:space="preserve">
+    <value>Если печатать достаточно быстро, карточки могут не успевать появляться одна за другой — это особенность режима, а не сбой.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileTitle" xml:space="preserve">
+    <value>Профиль клавиатуры и раскладки</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph1" xml:space="preserve">
+    <value>Прежде чем подсказки станут полезными, нужно настроить, как выглядит ваша клавиатура на экране. За это отвечают два разных параметра: **профиль клавиатуры** — форма и расположение клавиш, и **раскладки** — какие символы на них показаны. Их нельзя путать: профиль не меняет символы, а раскладка не меняет геометрию.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph2" xml:space="preserve">
+    <value>Чтобы задать профиль, нажмите **Изменить** в строке **Профиль клавиатуры**. Откроется окно выбора клавиатуры с тремя вариантами:</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph3" xml:space="preserve">
+    <value>1. **ANSI** — если на вашей клавиатуре широкий горизонтальный `Enter` в один ряд по высоте. Так обычно выглядит американский стандарт.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph4" xml:space="preserve">
+    <value>2. **ISO** — если `Enter` высокий в два ряда по высоте, но между левым `Shift` и `Z` нет дополнительной клавиши. Это не самый распространённый формат **ISO** в мире, но так обычно выглядят клавиатуры, распространённые в СНГ и Восточной Европе.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph5" xml:space="preserve">
+    <value>3. Создание своей клавиатуры — если ни один из пресетов не подошёл. Ведёт в отдельную калибровку (см. следующий раздел, «Калибровка собственного профиля»).</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph6" xml:space="preserve">
+    <value>Подписей у первых двух карточек в окне выбора нет: их различают только по картинке. Несмотря на это, в тексте руководства они называются ANSI и ISO, иначе пришлось бы каждый раз пересказывать форму клавиши словами.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph7" xml:space="preserve">
+    <value>После выбора любого из трёх вариантов открывается окно выбора раскладок. Раскладки в нём подгружаются из тех, что уже установлены в системе. Можно выбрать основную раскладку и, отдельно, дополнительную (или оставить **Нет**, если нужен только один набор символов в подсказке). Если выбрана только основная, её символ на карточке подсказки показывается по центру клавиши; если выбраны обе, их символы располагаются каждый в своей позиции.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph8" xml:space="preserve">
+    <value>Латинские символы на клавишах видны только тогда, когда среди выбранных раскладок есть латинская. А вот подписи служебных и навигационных клавиш — `Esc`, `Tab`, `Enter`, `Shift`, стрелки, функциональные клавиши, `Insert` и подобные — показываются по-латински всегда, независимо от раскладки: это фиксированные подписи самих клавиш, а не символы, которые меняются вместе с раскладкой.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyboardProfileParagraph9" xml:space="preserve">
+    <value>Пока профиль клавиатуры не задан, вместо обычной карточки подсказка предложит выбрать профиль. Включение автоподсказок тоже откроет окно выбора.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileTitle" xml:space="preserve">
+    <value>Калибровка собственного профиля</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph1" xml:space="preserve">
+    <value>Если в окне выбора клавиатуры вы выбрали создание своей клавиатуры, а затем задали раскладки, откроется отдельное окно калибровки. С этого момента и до завершения или отмены калибровки все нажатия клавиш перехватываются: они не доходят ни до других приложений, ни до остального BezBukv — только до самого мастера калибровки.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph2" xml:space="preserve">
+    <value>Из этого перехвата есть исключения. Сочетание `Ctrl+Alt+Delete` во время калибровки фиксируется, но не блокируется: системный экран (блокировка компьютера, смена пользователя, диспетчер задач) всё равно открывается, и через него можно прервать зависшую калибровку. Отдельно устроена клавиша `Escape`: она не записывается как обычная клавиша, а ставит калибровку на паузу — то же самое, что кнопка «Пауза» в самом окне; окно при этом не закрывается. Сделано это специально, чтобы `Escape` оставался доступным способом выйти из перехвата в любой момент. Если вам всё же нужно записать в профиль саму клавишу `Escape`, наведите курсор на кнопку **«+»** (добавление пустой ячейки) — рядом появится отдельная кнопка **«Esc»**, её и нужно выбрать курсором.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph3" xml:space="preserve">
+    <value>Профиль заполняется по рядам, слева направо: нажимаете клавиши одну за другой, и они добавляются в текущий ряд по порядку. Если в геометрии клавиатуры есть промежуток без клавиши, вставьте пустую ячейку кнопкой **«+»** — на подсказке такое место потом будет выглядеть как пустой промежуток.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph4" xml:space="preserve">
+    <value>Если нужна клавиша шире обычной, нажмите её несколько раз подряд: с каждым нажатием она станет шире. На подсказке такая широкая клавиша отображается под всеми клавишами верхнего ряда, которые расположены над ней.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph5" xml:space="preserve">
+    <value>Управляющие кнопки внизу окна калибровки позволяют: стереть последнюю добавленную ячейку, сбросить весь текущий ряд, перейти к заполнению следующего ряда, поставить калибровку на паузу, отменить её целиком или подтвердить и применить записанный профиль. Пауза пригодится, если во время калибровки нужно отвлечься и что-то сделать на компьютере: процесс приостанавливается, уже заполненные ряды не пропадают, и калибровку можно продолжить позже с того же места.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph6" xml:space="preserve">
+    <value>Символы, которые показываются на клавишах профиля, берутся из выбранных раскладок операционной системы. Если у какой-то клавиши на вашей физической клавиатуре в выбранных раскладках нет значения, её всё равно можно записать — на подсказке она будет отображаться без подписи.</value>
+  </data>
+  <data name="Settings_Guide_HintsCustomProfileParagraph7" xml:space="preserve">
+    <value>Отдельный случай — клавиши-дубликаты, которые посылают один и тот же код. При нажатии любой из них на подсказке покажется та клавиша, которая была записана в профиль первой; вторая, повторно нажатая, отдельно не отображается никак. Поэтому вместо дублирующей клавиши лучше поставить пустую ячейку.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyTitle" xml:space="preserve">
+    <value>Безопасность перехвата клавиатуры</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph1" xml:space="preserve">
+    <value>Как уже говорилось в разделе про калибровку, `Escape` во время неё не записывается как обычная клавиша, а ставит процесс на паузу — именно для того, чтобы у вас всегда оставался способ вернуть управление компьютером, даже когда все остальные нажатия перехватываются калибровкой. Но если по какой-то причине этот путь не сработал, есть ещё несколько независимых способов прервать перехват:</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph2" xml:space="preserve">
+    <value>- **Кликнуть мышью кнопку «Пауза»** в самом окне калибровки — останавливает запись на месте, ничего не сбрасывая; заполненные ряды сохраняются.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph3" xml:space="preserve">
+    <value>- **Отменить калибровку кнопкой «Отмена»** — прерывает процесс полностью.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph4" xml:space="preserve">
+    <value>- **Поставить на паузу всё приложение** через значок в трее (левый клик по значку) — это снимает перехват не только в калибровке, но и во всех остальных режимах.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph5" xml:space="preserve">
+    <value>- **Полностью закрыть приложение** через трей (правый клик по значку → «Выход»).</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph6" xml:space="preserve">
+    <value>- **Дождаться срабатывания страховочного таймера** — как он устроен, разобрано ниже.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph7" xml:space="preserve">
+    <value>Пока идёт калибровка клавиатуры или показана подсказка при удержании сочетания клавиш, BezBukv перехватывает нажатия клавиатуры. За страховочный случай отвечает параметр **«Автовыход из перехвата клавиш»** на вкладке **Дополнительно**. Значение задаётся в секундах, минимум — 10 с, по умолчанию — 120 с (2 минуты).</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph8" xml:space="preserve">
+    <value>Этот параметр отвечает за оба режима перехвата, но ведёт себя в них по-разному. В подсказке при удержании таймер запускается один раз — в момент, когда вы зажали сочетание клавиш, — и с этого момента отсчитывает время без сбросов, вне зависимости от того, что вы делаете дальше. В калибровке, наоборот, таймер сбрасывается заново при каждом нажатии любой клавиши, то есть отсчёт всегда идёт от последнего вашего действия, а не от начала калибровки.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph9" xml:space="preserve">
+    <value>Когда таймер истекает, перехват снимается безусловно — независимо от того, продолжаете вы в этот момент держать сочетание клавиш или нет. После этого нажатия клавиш снова начинают доходить до того приложения, которое в фокусе, как в обычном режиме. Именно поэтому слишком маленькое значение опасно: если вы держите сочетание клавиш и разглядываете подсказки, нажимая интересующие вас клавиши, а таймер тем временем истёк, освобождённый перехват отправит эти же нажатия прямо в приложение, которое в этот момент в фокусе, — и если вы не уследите за таймингом, это может привести к нежелательным, а иногда и необратимым последствиям в этом приложении.</value>
+  </data>
+  <data name="Settings_Guide_HintsInterceptionSafetyParagraph10" xml:space="preserve">
+    <value>В то же время делать значение намного больше значения по умолчанию тоже не стоит: ситуация, где вам вообще понадобится этот аварийный выход, крайне маловероятна, но если она всё же случится, слишком большой таймер заставит ждать освобождения клавиатуры куда дольше необходимого — вплоть до перезагрузки компьютера как единственного быстрого способа вернуть себе управление.</value>
+  </data>
+  <data name="Settings_Guide_HintsProfileBackupTitle" xml:space="preserve">
+    <value>Не потерять собственный профиль</value>
+  </data>
+  <data name="Settings_Guide_HintsProfileBackupParagraph1" xml:space="preserve">
+    <value>Если вы откалибровали собственный профиль клавиатуры, кнопка **«Сбросить настройки»** (внизу окна настроек) сотрёт и его вместе со всеми остальными параметрами, и записанная вручную геометрия при этом не сохраняется отдельно. Поэтому после того, как удачно откалибровали клавиатуру, стоит сразу сделать **Экспорт** — сохранить набор настроек в файл, — чтобы при необходимости можно было восстановить именно эту геометрию, а не собирать её заново. Как устроены импорт, экспорт и сброс в целом — в разделе «Окно настроек и общие элементы», выше.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysTitle" xml:space="preserve">
+    <value>Особые случаи: Fn и Pause/Break</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph1" xml:space="preserve">
+    <value>С парой клавиш подсказки ведут себя не совсем обычно — из-за особенностей самой Windows и прошивки клавиатуры, а не приложения.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph2" xml:space="preserve">
+    <value>**Клавиша `Fn`** на большинстве клавиатур не передаётся Windows как обычная клавиша. Обычно она обрабатывается самой клавиатурой или контроллером устройства: например, при нажатии `Fn` вместе с функциональной клавишей в Windows поступает уже результирующее событие — изменение громкости, яркости, управление воспроизведением и т. п.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph3" xml:space="preserve">
+    <value>Поэтому стандартными средствами перехвата клавиатуры отдельное нажатие `Fn`, как правило, определить нельзя, и сама клавиша `Fn` в подсказках не учитывается. Конкретное поведение может отличаться у отдельных моделей клавиатур.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph4" xml:space="preserve">
+    <value>**Клавиши, меняющие код под модификатором.** Некоторые клавиши при нажатии вместе с модификатором — прежде всего с `Ctrl` — отправляют системе не тот код, что при нажатии в одиночку. Калибровка собственного профиля записывает клавиши без модификатора (см. раздел выше, «Калибровка собственного профиля»). Поэтому если подсказка вызывается сочетанием с `Ctrl` (режим удержания сочетания клавиш), а нажатая клавиша относится к таким «раздваивающимся», код, приходящий под зажатым `Ctrl`, не совпадает с тем, что был записан при калибровке, — и подсказка для этой клавиши в режиме удержания может не показаться.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph5" xml:space="preserve">
+    <value>Единственная известная сейчас такая клавиша — **`Pause`/`Break`**. Клавиша `Pause`, нажатая отдельно, и сочетание `Ctrl+Pause`, которое сама система превращает в `Break`, — это разные коды. Отсюда следствие:</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph6" xml:space="preserve">
+    <value>- в режиме удержания сочетания, построенном на `Ctrl` (например, `Ctrl+F8`), подсказка для клавиши `Pause` не появится;</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph7" xml:space="preserve">
+    <value>- в автоподсказках, где `Ctrl` не задействован, `Pause` работает как обычно.</value>
+  </data>
+  <data name="Settings_Guide_HintsSpecialKeysParagraph8" xml:space="preserve">
+    <value>То есть это не ошибка распознавания, а системная подмена `Ctrl+Pause` на `Break`. Сама клавиша `Pause` при этом по-прежнему видна как сосед на чужой карточке подсказки, даже когда собственная подсказка для неё в режиме удержания не срабатывает.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesTitle" xml:space="preserve">
+    <value>Категории клавиш</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph1" xml:space="preserve">
+    <value>Два переключателя решают, для каких клавиш подсказка вообще показывается.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph2" xml:space="preserve">
+    <value>**Показывать цифровой ряд** отвечает за клавиши верхнего ряда с цифрами (это цифры `0`–`9` и клавиши `-`/`=`). При выключении карточка для нажатия самой цифровой клавиши не появляется, но если вы нажмёте соседнюю клавишу, она всё равно будет видна: переключатель скрывает подсказку только для клавиши, которую вы нажали. Клавиша с тильдой/«Ё» в эту категорию не входит и показывается всегда, независимо от переключателя; цифры на цифровом блоке (Numpad) не показываются никогда, ни при каких настройках.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph3" xml:space="preserve">
+    <value>**Показывать служебные клавиши** отвечает за функциональные клавиши, модификаторы (`Ctrl`, `Alt`, `Shift` и другие), `Пробел`, `Enter`, `Tab`, `Backspace`, клавиши навигации и редактирования (стрелки, `Insert`, `Delete`, `Home`, `End`, `Page Up`, `Page Down` и подобные). При выключении подсказка для них не показывается — с тем же уточнением: как соседи на чужой карточке они видны в любом случае.</value>
+  </data>
+  <data name="Settings_Guide_HintsKeyCategoriesParagraph4" xml:space="preserve">
+    <value>Оба переключателя управляют именно показом карточки для соответствующей категории. На блокировку нажатий они не влияют: в режиме удержания сочетания по-прежнему перехватываются все клавиши, кроме `Escape`, независимо от того, что здесь выключено; автоподсказки же, наоборот, никогда ничего не блокируют.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceTitle" xml:space="preserve">
+    <value>Оформление подсказки</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph1" xml:space="preserve">
+    <value>Ещё три параметра отвечают за то, как подсказка выглядит на экране.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph2" xml:space="preserve">
+    <value>**Анимировать подсказку** включает плавное появление и скрытие карточки; при выключении она появляется и исчезает сразу. Эффект от анимации небольшой — если вы только учитесь слепой печати и печатаете медленно, она может добавить комфорта; если печатаете уже быстро и хотите видеть карточку мгновенно, её можно выключить.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph3" xml:space="preserve">
+    <value>**Непрозрачность** меняется от 20% до 100%: меньшее значение делает карточку прозрачнее и менее заметной на экране, большее — заметнее.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph4" xml:space="preserve">
+    <value>**Масштаб** меняется от 50% до 200%: меньшее значение делает всю экранную клавиатуру компактнее, большее — крупнее.</value>
+  </data>
+  <data name="Settings_Guide_HintsAppearanceParagraph5" xml:space="preserve">
+    <value>При перетаскивании ползунков непрозрачности и масштаба сразу показывается живой предпросмотр карточки поверх окна настроек — можно подобрать значения так, чтобы подсказка не мешала видеть то, что вы печатаете, и одновременно оставалась разборчивой.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionTitle" xml:space="preserve">
+    <value>Где появляется подсказка</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph1" xml:space="preserve">
+    <value>Карточка подсказки старается появиться рядом с местом, где вы печатаете, так, чтобы не закрывать собой сам текст. Для этого BezBukv запрашивает у принимающего приложения (того, что сейчас в фокусе) координаты каретки — курсора ввода.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph2" xml:space="preserve">
+    <value>Разные приложения отдают эти координаты по-разному, а некоторые не отдают их вовсе. В таком случае подсказка уходит в запасное место — правый нижний угол.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph3" xml:space="preserve">
+    <value>Такая ситуация возможна и на переносе строки, и при вводе первого или последнего символа в строке: если приложение в этот момент не может отдать координаты, подсказка тоже может уйти в запасной угол; но если приложение всё же отдаёт хоть какие-то координаты рядом, подсказка встаёт у соседнего, уже напечатанного символа.</value>
+  </data>
+  <data name="Settings_Guide_HintsPositionParagraph4" xml:space="preserve">
+    <value>Такие срывы случаются не из-за ошибки самого BezBukv, а из-за того, как по-разному принимающие приложения сообщают положение курсора.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedTitle" xml:space="preserve">
+    <value>Дополнительно</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph1" xml:space="preserve">
+    <value>На вкладке **Дополнительно** собраны задержки и защитные ограничения приложения. Обычно их лучше оставить как есть: значения уже подобраны и стабильно работают даже на медленном компьютере. Увеличение задержки может помочь, если принимающее приложение реагирует медленно, но заставит BezBukv дольше ждать на этом шаге; слишком маленькое значение, наоборот, повышает риск, что копирование или вставка не успеют завершиться. Менять эти параметры стоит, только если вы столкнулись с конкретной проблемой — возможность такой правки специально оставлена для опытных пользователей.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph2" xml:space="preserve">
+    <value>Значения по умолчанию проверялись на медленных компьютерах под нагрузкой: параллельный стресс-тест процессора, оперативной памяти и жёсткого диска, файл подкачки на HDD и искусственное удержание буфера обмена. При таких условиях параметры по умолчанию срабатывали стабильно и без сбоев. Если ваш компьютер тормозит ещё сильнее, чем в этих условиях, вероятнее всего, будет уже не до работы BezBukv, а до вопроса о возможности работать за такой машиной вообще.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph3" xml:space="preserve">
+    <value>Все числовые поля на этой вкладке ведут себя одинаково. Значение сохраняется, как только вы нажмёте `Enter`, уйдёте из поля или закроете окно настроек. Если ввести не число, ноль, отрицательное значение или число вне допустимого диапазона, поле подсветится красным и вернётся к последнему корректному значению. Одно из полей на вкладке — максимальный размер текста — показывает значение с отдельной подписью «K»: это множитель на тысячу, то есть число и единица «симв.» относятся к тысячам символов, а не к единицам (подробнее — в описании этого параметра, ниже).</value>
+  </data>
+  <data name="Settings_Guide_AdvancedParagraph4" xml:space="preserve">
+    <value>Дальше по порядку идут параметры, относящиеся к исправлению текста в неправильной раскладке. Ещё один параметр этой вкладки — «Автовыход из перехвата клавиш» — по смыслу относится не к исправлению текста, а к подсказкам и калибровке клавиатуры, поэтому он уже разобран выше, в разделе «Подсказки → Безопасность перехвата клавиатуры»; здесь он не повторяется.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitTitle" xml:space="preserve">
+    <value>Ожидание копирования</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph1" xml:space="preserve">
+    <value>После того как вы нажали сочетание клавиш для исправления, BezBukv сам выполняет программное копирование (`Ctrl+C`) — забирает выделенный текст в буфер обмена. **Ожидание копирования** — это сколько миллисекунд приложение готово ждать, пока нужный текст в буфере действительно появится, прежде чем сдаться. По умолчанию — 500 мс, значение может быть любым положительным целым числом.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph2" xml:space="preserve">
+    <value>Ждать есть смысл вот почему: само помещение небольшого объёма текста в буфер обмена обычно занимает пренебрежимо мало времени — как правило, существенно меньше миллисекунды, но основная непредсказуемая задержка возникает раньше, пока целевое приложение обработает команду копирования и подготовит данные. Дополнительно буфер обмена в этот момент может быть занят: например, какое-то другое приложение как раз читает из него данные. BezBukv обходит такие блокировки повторными попытками (подробнее ниже, в разделе о восстановлении буфера). Именно это время и покрывает таймаут ожидания копирования.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph3" xml:space="preserve">
+    <value>Если время ожидания истекло, а буфер обмена так и остался пустым, приложение прекращает попытки и сообщает, что ничего не было выбрано. Если в буфере что-то появилось, но это не текст, приложение сообщает об ошибке — что выделенное не является текстом — и тоже прекращает ждать.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedCopyWaitParagraph4" xml:space="preserve">
+    <value>Полсекунды по умолчанию — время, которого с запасом хватает почти всегда: в тестах на медленном компьютере копирование укладывалось в этот таймаут во всех прогонах. Увеличивать это значение стоит, если принимающее приложение медленное и не успевает передать выделенное за отведённое время. Если выделенный текст вообще ни разу не доходит до буфера обмена, дело, скорее всего, не во времени ожидания, а в чём-то другом.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeTitle" xml:space="preserve">
+    <value>Максимальный размер текста</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeParagraph1" xml:space="preserve">
+    <value>**Максимальный размер текста** ограничивает, насколько длинный фрагмент BezBukv вообще согласится исправлять. Значение задаётся в тысячах символов — не в байтах и не в словах: разные раскладки, языки и кодировки занимают разное количество байт на символ, поэтому решено было мерить именно количество символов, а не объём данных.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeParagraph2" xml:space="preserve">
+    <value>Если выделение больше лимита, BezBukv отклоняет его целиком, а не обрезает до допустимой длины. Диапазон — от 1 до 1 073 741 тысячи символов, по умолчанию 32 тысячи. Тридцать две тысячи символов — это уже довольно большой текст для обычной работы, и в тестах такой объём стабильно успевал перевестись и вставиться без проблем.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedMaxTextSizeParagraph3" xml:space="preserve">
+    <value>Уменьшите, если вы хотите подстраховаться от случайного исправления огромного объёма текста.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayTitle" xml:space="preserve">
+    <value>Задержка восстановления буфера обмена</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph1" xml:space="preserve">
+    <value>Когда BezBukv автоматически вставляет исправленный текст в принимающее приложение, сразу после этого начинается обратный отсчёт: прежде чем вернуть в буфер обмена то, что было в нём до исправления, приложение выжидает **задержку восстановления буфера обмена**. Значение — положительное целое число миллисекунд, по умолчанию 300 мс.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph2" xml:space="preserve">
+    <value>BezBukv лишь отправляет нажатие `Ctrl+V` и не может узнать, что принимающее приложение уже забрало текст. Бывает, что нажатие дошло, но приложение в этот момент занято чем-то другим и поставило его в очередь, хотя во время обычного набора текста такое почти не случается. Если восстановить прежний буфер раньше, чем принимающее приложение реально обратилось к буферу за исправленным текстом, оно получит не его, а то, что было в буфере до этого. Задержка и покрывает этот промежуток — от отправки `Ctrl+V` до момента, когда принимающее приложение действительно читает буфер.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph3" xml:space="preserve">
+    <value>Может случиться и так, что к моменту истечения задержки принимающее приложение всё ещё блокирует буфер для чтения. На этот случай BezBukv повторяет попытки записи до пяти раз, с интервалом около 10 мс между попытками.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedClipboardRestoreDelayParagraph4" xml:space="preserve">
+    <value>Если у вас после исправления в принимающее приложение время от времени попадает не исправленный текст, а старое содержимое буфера или если прежнее содержимое буфера после исправления не возвращается, — это и есть симптомы слишком короткой задержки. Стоит попробовать её увеличить, особенно если буфер обмена в системе используется активно: запущено много приложений, которые к нему то и дело обращаются.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteTitle" xml:space="preserve">
+    <value>Пробовать вставку в неопределённые поля</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph1" xml:space="preserve">
+    <value>При включении BezBukv пробует вставить и в неопределённые поля.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph2" xml:space="preserve">
+    <value>Как уже говорилось в разделе про неопределённое поле, если BezBukv не может понять, можно ли редактировать место, куда вставится результат, вместо автоматической вставки открывается окно результата. По умолчанию параметр выключен.</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph3" xml:space="preserve">
+    <value>Если параметр включён, а вставка всё равно не удалась, окно результата в этом случае не появится: попытка была сделана, но её результат остаётся неизвестен приложению, так что оно просто ничего дополнительно не показывает. На терминалы и консоли этот переключатель не распространяется в любом случае — для них всегда используется окно результата, независимо от значения параметра (подробнее о том, почему терминалы выделены отдельно, — в разделе про неопределённое поле, выше).</value>
+  </data>
+  <data name="Settings_Guide_AdvancedUnknownFieldPasteParagraph4" xml:space="preserve">
+    <value>Параметр выключен по умолчанию по следующей причине: BezBukv не может повлиять на то, куда попадёт вставленный текст в принимающем приложении — вставка рискует случиться не туда, куда вы рассчитывали, либо вообще не сработать. Так как окно результата не появится, в лучшем случае вы просто не сможете воспользоваться запасным вариантом вставки исправленного текста. А в худшем можете раскрыть конфиденциальную информацию в случайное поле принимающего приложения. Поэтому включать параметр стоит осознанно: сначала имеет смысл накопить опыт с конкретными приложениями, с которыми вы обычно работаете, — например, через ручную вставку кнопкой «Попробовать вставить» в окне результата, — и только после этого решать, готовы ли вы разрешить автоматику там, где BezBukv не уверен в результате.</value>
+  </data>
+  <data name="Settings_General_Title" xml:space="preserve">
+    <value>Основные</value>
+  </data>
+  <data name="Settings_General_Subtitle" xml:space="preserve">
+    <value>Базовые параметры приложения.</value>
+  </data>
+  <data name="Settings_General_Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="Settings_General_LanguageDescription" xml:space="preserve">
+    <value>Выберите язык интерфейса. Вариант «Системный» следует языку Windows.</value>
+  </data>
+  <data name="Settings_General_LanguageEnglish" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="Settings_General_LanguageSystem" xml:space="preserve">
+    <value>Системный</value>
+  </data>
+  <data name="Settings_General_LanguageRussian" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="Settings_General_Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="Settings_General_ThemeDescription" xml:space="preserve">
+    <value>Выберите тему приложения. Вариант «Системная» следует настройке Windows.</value>
+  </data>
+  <data name="Settings_General_ThemeSystem" xml:space="preserve">
+    <value>Системная</value>
+  </data>
+  <data name="Settings_General_ThemeLight" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="Settings_General_ThemeDark" xml:space="preserve">
+    <value>Тёмная</value>
+  </data>
+  <data name="Settings_General_StartWithWindows" xml:space="preserve">
+    <value>Запускать вместе с Windows</value>
+  </data>
+  <data name="Settings_General_StartWithWindowsDescription" xml:space="preserve">
+    <value>Автоматически запускать BezBukv при входе в систему.</value>
+  </data>
+  <data name="Settings_Correction_Title" xml:space="preserve">
+    <value>Исправление раскладки</value>
+  </data>
+  <data name="Settings_Correction_Subtitle" xml:space="preserve">
+    <value>Выделите текст в неправильной раскладке и нажмите сочетание клавиш — BezBukv исправит его.
+Работает для пары English (US) QWERTY ↔ Russian ЙЦУКЕН. Возможны ошибки из-за дублирования символов на клавиатуре — подробнее в Руководстве.</value>
+  </data>
+  <data name="Settings_Correction_Enable" xml:space="preserve">
+    <value>Исправлять текст в неправильной раскладке</value>
+  </data>
+  <data name="Settings_Correction_EnableDescription" xml:space="preserve">
+    <value>При выключении сочетание клавиш освобождается для других приложений.</value>
+  </data>
+  <data name="Settings_Correction_Shortcut" xml:space="preserve">
+    <value>Сочетание клавиш</value>
+  </data>
+  <data name="Settings_Correction_ShortcutDescription" xml:space="preserve">
+    <value>Сочетание клавиш, которое запускает исправление выделенного текста.</value>
+  </data>
+  <data name="Settings_Correction_SwitchLayout" xml:space="preserve">
+    <value>Переключать раскладку клавиатуры после исправления</value>
+  </data>
+  <data name="Settings_Correction_SwitchLayoutDescription" xml:space="preserve">
+    <value>После замены текста переключать раскладку клавиатуры на соответствующую, чтобы продолжить печатать правильно.</value>
+  </data>
+  <data name="Settings_Correction_ResultWindowHint" xml:space="preserve">
+    <value>Если вместо вставки открывается окно результата, см. «Неопределённое поле и попытка вставки» в Руководстве.</value>
+  </data>
+  <data name="Settings_Correction_TryPasteUnknown" xml:space="preserve">
+    <value>Пробовать вставку в неопределённые поля</value>
+  </data>
+  <data name="Settings_Correction_TryPasteUnknownDescription" xml:space="preserve">
+    <value>Результат зависит от принимающего приложения: вставка может не сработать или попасть не туда. Когда выключено, вместо неё показывается окно результата.</value>
+  </data>
+  <data name="Settings_Peek_Title" xml:space="preserve">
+    <value>Подсказки</value>
+  </data>
+  <data name="Settings_Peek_Subtitle" xml:space="preserve">
+    <value>Удерживайте сочетание и нажимайте клавиши, чтобы увидеть символы на них и на соседних клавишах. Пригодится, если на клавиатуре нет нужной гравировки или сложно ориентироваться вслепую.</value>
+  </data>
+  <data name="Settings_Peek_Enable" xml:space="preserve">
+    <value>Включить подсказки</value>
+  </data>
+  <data name="Settings_Peek_EnableDescription" xml:space="preserve">
+    <value>При выключении сочетание клавиш освобождается для других приложений.</value>
+  </data>
+  <data name="Settings_Peek_Shortcut" xml:space="preserve">
+    <value>Сочетание клавиш</value>
+  </data>
+  <data name="Settings_Peek_ShortcutDescription" xml:space="preserve">
+    <value>Удерживайте, чтобы показать подсказку; отпустите, чтобы скрыть. При очистке сочетание освобождается, но Автоподсказки продолжат работать.</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfile" xml:space="preserve">
+    <value>Профиль клавиатуры</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileDescription" xml:space="preserve">
+    <value>Выберите физическую конфигурацию клавиатуры для подсказки.</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileAutomationName" xml:space="preserve">
+    <value>Текущий профиль клавиатуры</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileAnsi" xml:space="preserve">
+    <value>ANSI</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileIso" xml:space="preserve">
+    <value>ISO</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileCustom" xml:space="preserve">
+    <value>Пользовательский</value>
+  </data>
+  <data name="Settings_Peek_KeyboardProfileNotSet" xml:space="preserve">
+    <value>Не задан</value>
+  </data>
+  <data name="Settings_Peek_AutoPeek" xml:space="preserve">
+    <value>Автоподсказки</value>
+  </data>
+  <data name="Settings_Peek_AutoPeekDescription" xml:space="preserve">
+    <value>Автоматически показывать подсказку для каждой набираемой клавиши.</value>
+  </data>
+  <data name="Settings_Peek_AutoPeekLinger" xml:space="preserve">
+    <value>Длительность автоподсказки</value>
+  </data>
+  <data name="Settings_Peek_Animate" xml:space="preserve">
+    <value>Анимировать подсказку</value>
+  </data>
+  <data name="Settings_Peek_AnimateDescription" xml:space="preserve">
+    <value>Плавно показывать и скрывать подсказку.</value>
+  </data>
+  <data name="Settings_Peek_Opacity" xml:space="preserve">
+    <value>Непрозрачность</value>
+  </data>
+  <data name="Settings_Peek_OpacityDescription" xml:space="preserve">
+    <value>Насколько непрозрачна подсказка.</value>
+  </data>
+  <data name="Settings_Peek_Scale" xml:space="preserve">
+    <value>Масштаб</value>
+  </data>
+  <data name="Settings_Peek_ScaleDescription" xml:space="preserve">
+    <value>Размер экранной подсказки.</value>
+  </data>
+  <data name="Settings_Peek_KeyCapture" xml:space="preserve">
+    <value>КАТЕГОРИИ КЛАВИШ</value>
+  </data>
+  <data name="Settings_Peek_CaptureNumberRow" xml:space="preserve">
+    <value>Показывать цифровой ряд</value>
+  </data>
+  <data name="Settings_Peek_CaptureNumberRowDescription" xml:space="preserve">
+    <value>Показывать подсказки для клавиш ряда 1–0.</value>
+  </data>
+  <data name="Settings_Peek_ShowServiceKeys" xml:space="preserve">
+    <value>Показывать служебные клавиши</value>
+  </data>
+  <data name="Settings_Peek_ShowServiceKeysDescription" xml:space="preserve">
+    <value>Показывать подсказки для функциональных клавиш, модификаторов, клавиш навигации и редактирования.</value>
+  </data>
+  <data name="Settings_Hotkey_Control" xml:space="preserve">
+    <value>Ctrl</value>
+  </data>
+  <data name="Settings_Hotkey_Alt" xml:space="preserve">
+    <value>Alt</value>
+  </data>
+  <data name="Settings_Hotkey_Shift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="Settings_Hotkey_Meta" xml:space="preserve">
+    <value>Win</value>
+  </data>
+  <data name="Settings_Hotkey_Separator" xml:space="preserve">
+    <value>+</value>
+  </data>
+  <data name="Settings_Hotkey_PeekKey" xml:space="preserve">
+    <value>F8</value>
+  </data>
+  <data name="Settings_ChangeShortcut" xml:space="preserve">
+    <value>Изменить</value>
+  </data>
+  <data name="Settings_Hotkey_RecordingHint" xml:space="preserve">
+    <value>Удерживайте только Ctrl, затем нажмите одну букву, цифру или функциональную клавишу.</value>
+  </data>
+  <data name="Settings_Hotkey_ConflictTooltip" xml:space="preserve">
+    <value>Это сочетание занято. Освободите его или назначьте другое.</value>
+  </data>
+  <data name="Settings_Hotkey_RecordingPrompt" xml:space="preserve">
+    <value>Нажмите клавиши…</value>
+  </data>
+  <data name="Settings_Hotkey_CancelRecording" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Settings_Hotkey_Clear" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="Settings_Hotkey_NotAssigned" xml:space="preserve">
+    <value>Не назначено</value>
+  </data>
+  <data name="Settings_Hotkey_InvalidCombination" xml:space="preserve">
+    <value>Используйте только Ctrl и одну букву, цифру или функциональную клавишу.</value>
+  </data>
+  <data name="Settings_Hotkey_InternalConflict" xml:space="preserve">
+    <value>Это сочетание уже используется для подсказок. Выберите другое сочетание.</value>
+  </data>
+  <data name="Settings_Hotkey_CorrectionConflict" xml:space="preserve">
+    <value>Это сочетание уже используется для исправления. Выберите другое сочетание.</value>
+  </data>
+  <data name="Settings_Hotkey_DiagnosticsConflict" xml:space="preserve">
+    <value>Это сочетание используется для диагностики. Выберите другое сочетание.</value>
+  </data>
+  <data name="Settings_Hotkey_CaptureFailed" xml:space="preserve">
+    <value>Не удалось начать запись сочетания клавиш. Повторите попытку.</value>
+  </data>
+  <data name="Settings_Hotkey_Unavailable" xml:space="preserve">
+    <value>Это сочетание уже используется, поэтому изменение не сохранено. Проверьте сочетания клавиш в браузерах, средах разработки, приложениях Office, терминалах и Windows, затем выберите другое.</value>
+  </data>
+  <data name="Settings_Hotkey_RegistrationFailed" xml:space="preserve">
+    <value>Не удалось зарегистрировать это сочетание, поэтому изменение не сохранено.</value>
+  </data>
+  <data name="Settings_Hotkey_RestoreFailed" xml:space="preserve">
+    <value>Не удалось зарегистрировать новое сочетание и восстановить предыдущее. Приостановите и возобновите BezBukv или перезапустите приложение.</value>
+  </data>
+  <data name="Settings_Hotkey_RestoreAfterSaveFailed" xml:space="preserve">
+    <value>Не удалось сохранить настройки и повторно зарегистрировать предыдущее сочетание. Приостановите и возобновите BezBukv или перезапустите приложение.</value>
+  </data>
+  <data name="Settings_Hotkey_PersistRollbackFailed" xml:space="preserve">
+    <value>Не удалось отменить отклонённое значение сочетания в файле настроек. Приостановите и возобновите BezBukv или перезапустите приложение, затем выберите рабочее сочетание.</value>
+  </data>
+  <data name="Settings_Advanced_Title" xml:space="preserve">
+    <value>Дополнительно</value>
+  </data>
+  <data name="Settings_Advanced_Subtitle" xml:space="preserve">
+    <value>Точная настройка задержек и ограничений безопасности.</value>
+  </data>
+  <data name="Settings_Advanced_Warning" xml:space="preserve">
+    <value>Эти параметры влияют на задержки и производительность. Обычно их не нужно менять — но если решите, сначала загляните в Руководство.</value>
+  </data>
+  <data name="Settings_Advanced_CorrectionGroup" xml:space="preserve">
+    <value>ИСПРАВЛЕНИЕ</value>
+  </data>
+  <data name="Settings_Advanced_PeekGroup" xml:space="preserve">
+    <value>ПОДСКАЗКИ</value>
+  </data>
+  <data name="Settings_Advanced_CopyTimeout" xml:space="preserve">
+    <value>Ожидание копирования</value>
+  </data>
+  <data name="Settings_Advanced_CopyTimeoutDescription" xml:space="preserve">
+    <value>Сколько ждать получения выделенного текста после нажатия сочетания клавиш.</value>
+  </data>
+  <data name="Settings_Advanced_CopyTimeoutValue" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="Settings_Advanced_MaxTextSize" xml:space="preserve">
+    <value>Максимальный размер текста</value>
+  </data>
+  <data name="Settings_Advanced_MaxTextSizeDescription" xml:space="preserve">
+    <value>Выделения большего размера отклоняются.</value>
+  </data>
+  <data name="Settings_Advanced_MaxTextSizeValue" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="Settings_Advanced_ClipboardRestoreDelay" xml:space="preserve">
+    <value>Задержка восстановления буфера обмена</value>
+  </data>
+  <data name="Settings_Advanced_ClipboardRestoreDelayDescription" xml:space="preserve">
+    <value>Пауза перед восстановлением буфера обмена после автоматической замены.</value>
+  </data>
+  <data name="Settings_Advanced_ClipboardRestoreDelayValue" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="Settings_Advanced_PeekAutoExit" xml:space="preserve">
+    <value>Автовыход из перехвата клавиш</value>
+  </data>
+  <data name="Settings_Advanced_PeekAutoExitDescription" xml:space="preserve">
+    <value>Защитный тайм-аут, который принудительно завершает захват клавиатуры — например, в подсказке при удержании или при калибровке клавиатуры.</value>
+  </data>
+  <data name="Settings_Advanced_PeekAutoExitValue" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="Settings_Unit_Milliseconds" xml:space="preserve">
+    <value>мс</value>
+  </data>
+  <data name="Settings_Unit_Characters" xml:space="preserve">
+    <value>симв.</value>
+  </data>
+  <data name="Settings_Unit_Seconds" xml:space="preserve">
+    <value>с</value>
+  </data>
+  <data name="Settings_Footer_Import" xml:space="preserve">
+    <value>Импорт</value>
+  </data>
+  <data name="Settings_Footer_Export" xml:space="preserve">
+    <value>Экспорт</value>
+  </data>
+  <data name="Settings_Footer_Reset" xml:space="preserve">
+    <value>Сбросить настройки</value>
+  </data>
+  <data name="Settings_Load_NewerVersion" xml:space="preserve">
+    <value>Ваши настройки созданы более новой версией приложения. Существующий файл оставлен без изменений.</value>
+  </data>
+  <data name="Settings_Load_Corrupt" xml:space="preserve">
+    <value>Не удалось прочитать настройки. Показаны значения по умолчанию, а существующий файл оставлен без изменений.</value>
+  </data>
+  <data name="Settings_Load_Failed" xml:space="preserve">
+    <value>Не удалось загрузить настройки. Пока показаны значения по умолчанию.</value>
+  </data>
+  <data name="Settings_Import_DialogTitle" xml:space="preserve">
+    <value>Импорт настроек</value>
+  </data>
+  <data name="Settings_Export_DialogTitle" xml:space="preserve">
+    <value>Экспорт настроек</value>
+  </data>
+  <data name="Settings_JsonFileFilter" xml:space="preserve">
+    <value>Настройки JSON (*.json)|*.json|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="Settings_Import_NewerVersion" xml:space="preserve">
+    <value>Этот файл создан более новой версией приложения. Текущие настройки не изменены.</value>
+  </data>
+  <data name="Settings_Import_Corrupt" xml:space="preserve">
+    <value>Не удалось прочитать этот файл настроек. Текущие настройки не изменены.</value>
+  </data>
+  <data name="Settings_Import_Failed" xml:space="preserve">
+    <value>Не удалось импортировать настройки. Текущие настройки не изменены.</value>
+  </data>
+  <data name="Settings_Export_Failed" xml:space="preserve">
+    <value>Не удалось экспортировать настройки. Повторите попытку.</value>
+  </data>
+  <data name="Settings_Reset_Failed" xml:space="preserve">
+    <value>Не удалось сбросить настройки. Текущие настройки не изменены.</value>
+  </data>
+  <data name="Settings_Save_Failed" xml:space="preserve">
+    <value>Не удалось сохранить настройку. Предыдущее значение восстановлено.</value>
+  </data>
+  <data name="Settings_Autostart_ChangeFailed" xml:space="preserve">
+    <value>Не удалось изменить автозапуск вместе с Windows. Предыдущее значение восстановлено.</value>
+  </data>
+  <data name="Settings_Link_Failed" xml:space="preserve">
+    <value>Не удалось открыть ссылку. Повторите попытку.</value>
+  </data>
+</root>

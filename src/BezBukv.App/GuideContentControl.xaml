@@ -1,0 +1,553 @@
+<UserControl x:Class="BezBukv.App.GuideContentControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BezBukv.App">
+    <UserControl.Resources>
+        <Style x:Key="SettingsSectionTitleStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize"
+                    Value="18" />
+            <Setter Property="FontWeight"
+                    Value="SemiBold" />
+            <Setter Property="Margin"
+                    Value="0,0,0,2" />
+        </Style>
+
+        <Style x:Key="GuideSectionHeadingStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin"
+                    Value="0,10,0,8" />
+            <Setter Property="FontSize"
+                    Value="15" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
+        <Style x:Key="GuideSubsectionHeadingStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin"
+                    Value="0,8,0,8" />
+            <Setter Property="FontSize"
+                    Value="13" />
+            <Setter Property="FontWeight"
+                    Value="Bold" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
+        <Style x:Key="GuideSubSubHeadingStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin"
+                    Value="0,8,0,8" />
+            <Setter Property="FontSize"
+                    Value="13" />
+            <Setter Property="FontWeight"
+                    Value="SemiBold" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
+        <Style x:Key="GuideParagraphStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin"
+                    Value="0,0,0,10" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource SettingsBrandMutedBrush}" />
+            <Setter Property="LineHeight"
+                    Value="19" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+    </UserControl.Resources>
+
+    <StackPanel Margin="0,0,10,0">
+        <TextBlock Style="{StaticResource SettingsSectionTitleStyle}"
+                   Text="{Binding [Settings_Guide_Title]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   Margin="0,8,0,10"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_IntroductionParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_IntroductionParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_IntroductionParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideSectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_ImmediateFactsTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_ImmediateFactsParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_ImmediateFactsParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_ImmediateFactsParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_ImmediateFactsParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_ImmediateFactsParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_ImmediateFactsParagraph6]}" />
+
+        <TextBlock Style="{StaticResource GuideSectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_TrayTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_TrayOverviewParagraph]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_TrayMenuIntro]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_TrayPauseParagraph]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_TrayAutoHintsParagraph]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_TraySettingsParagraph]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_TrayExitParagraph]}" />
+
+        <TextBlock Style="{StaticResource GuideSectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_SettingsWindowTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_SettingsWindowOverviewParagraph]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_SettingsWindowParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_SettingsWindowParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_SettingsWindowParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_SettingsWindowParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_SettingsWindowParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideSectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_GeneralTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_GeneralParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_GeneralParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_GeneralParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_GeneralParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideSectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_LayoutCorrectionTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_CorrectionHotkeyTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionHotkeyParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionHotkeyParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionHotkeyParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_CorrectionBehaviorTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionBehaviorParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionBehaviorParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionBehaviorParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionBehaviorParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionBehaviorParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_CorrectionResultWindowTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionResultWindowParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionResultWindowParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionResultWindowParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionResultWindowParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionResultWindowParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_CorrectionUnknownFieldTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph6]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph7]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionUnknownFieldParagraph8]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_CorrectionLayoutSwitchTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionLayoutSwitchParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionLayoutSwitchParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_CorrectionClipboardTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionClipboardParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionClipboardParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionClipboardParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_CorrectionClipboardParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideSectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsOverviewTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsOverviewParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsOverviewParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsOverviewParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideSubSubHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsHoldTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsHoldParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsHoldParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsHoldParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsHoldParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsHoldParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsHoldParagraph6]}" />
+
+        <TextBlock Style="{StaticResource GuideSubSubHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsAutoTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAutoParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAutoParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAutoParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsKeyboardProfileTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph6]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph7]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph8]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyboardProfileParagraph9]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsCustomProfileTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsCustomProfileParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsCustomProfileParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsCustomProfileParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsCustomProfileParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsCustomProfileParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsCustomProfileParagraph6]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsCustomProfileParagraph7]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsInterceptionSafetyTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph6]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph7]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph8]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph9]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsInterceptionSafetyParagraph10]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsProfileBackupTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsProfileBackupParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsSpecialKeysTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph6]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph7]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsSpecialKeysParagraph8]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsKeyCategoriesTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyCategoriesParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyCategoriesParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyCategoriesParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsKeyCategoriesParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsAppearanceTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAppearanceParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAppearanceParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAppearanceParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAppearanceParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsAppearanceParagraph5]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_HintsPositionTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsPositionParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsPositionParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsPositionParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_HintsPositionParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideSectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_AdvancedTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_AdvancedCopyWaitTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedCopyWaitParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedCopyWaitParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedCopyWaitParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedCopyWaitParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_AdvancedMaxTextSizeTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedMaxTextSizeParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedMaxTextSizeParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedMaxTextSizeParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_AdvancedClipboardRestoreDelayTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedClipboardRestoreDelayParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedClipboardRestoreDelayParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedClipboardRestoreDelayParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedClipboardRestoreDelayParagraph4]}" />
+
+        <TextBlock Style="{StaticResource GuideSubsectionHeadingStyle}"
+                   Text="{Binding [Settings_Guide_AdvancedUnknownFieldPasteTitle]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedUnknownFieldPasteParagraph1]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedUnknownFieldPasteParagraph2]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedUnknownFieldPasteParagraph3]}" />
+
+        <TextBlock Style="{StaticResource GuideParagraphStyle}"
+                   local:GuideInlineText.Markup="{Binding [Settings_Guide_AdvancedUnknownFieldPasteParagraph4]}" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <ApplicationIcon>..\..\assets\app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BezBukv.Core\BezBukv.Core.csproj" />
+    <ProjectReference Include="..\BezBukv.Windows\BezBukv.Windows.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\app.ico"
+          Link="app.ico"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+    <Resource Include="..\..\assets\logo.png"
+              Link="Assets\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\AppStrings.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DesignTime>true</DesignTime>
+      <DependentUpon>AppStrings.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Resources\AppStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

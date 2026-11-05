@@ -1,0 +1,48 @@
+<Window x:Class="BezBukv.Windows.KeyboardPeekOverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="Manual"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        ShowActivated="False"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Topmost="True"
+        Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+        FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"
+        FontSize="{DynamicResource {x:Static SystemFonts.MessageFontSizeKey}}"
+        Focusable="False"
+        IsHitTestVisible="False"
+        Opacity="0"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True">
+    <Grid x:Name="OverlayRoot">
+        <Border Margin="16"
+                Padding="12"
+                Background="{DynamicResource SolidBackgroundFillColorBaseBrush}"
+                CornerRadius="16">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="24"
+                                  Direction="270"
+                                  Opacity="0.32"
+                                  ShadowDepth="4"
+                                  Color="Black" />
+            </Border.Effect>
+
+            <Grid x:Name="KeyboardGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="64" />
+                    <RowDefinition Height="64" />
+                    <RowDefinition Height="64" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="72" />
+                    <ColumnDefinition Width="72" />
+                    <ColumnDefinition Width="72" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

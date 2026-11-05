@@ -1,0 +1,18 @@
+# Автоопределение текстовых файлов; в репозитории хранить как LF
+* text=auto
+
+# Windows-специфичные файлы — CRLF при checkout
+*.sln     text eol=crlf
+*.csproj  text eol=crlf
+*.props   text eol=crlf
+*.targets text eol=crlf
+*.cmd     text eol=crlf
+*.bat     text eol=crlf
+*.ps1     text eol=crlf
+
+# Shell-скрипты — LF
+*.sh text eol=lf
+
+# Бинарные — без нормализации
+*.png binary
+*.ico binary

@@ -1,0 +1,1694 @@
+<Window x:Class="BezBukv.App.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:BezBukv.App"
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Title="{Binding [Settings_Title]}"
+        Width="900"
+        Height="640"
+        MinWidth="780"
+        MinHeight="560"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        ShowInTaskbar="True"
+        Background="{DynamicResource SolidBackgroundFillColorBaseBrush}"
+        Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+        FontFamily="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}"
+        FontSize="13"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True"
+        PreviewKeyDown="OnPreviewKeyDown">
+    <shell:WindowChrome.WindowChrome>
+        <shell:WindowChrome CaptionHeight="0"
+                            ResizeBorderThickness="12"
+                            GlassFrameThickness="0"
+                            UseAeroCaptionButtons="False" />
+    </shell:WindowChrome.WindowChrome>
+
+    <Window.Resources>
+        <Color x:Key="SettingsBrandAccentSoftLightColor">#FFE6EDFA</Color>
+        <Color x:Key="SettingsBrandAccentSoftDarkColor">#FF0C315E</Color>
+        <Color x:Key="SettingsBrandAccentInkLightColor">#FFFFFFFF</Color>
+        <Color x:Key="SettingsBrandAccentInkDarkColor">#FFFFFFFF</Color>
+        <Color x:Key="SettingsBrandMutedLightColor">#FF5D6470</Color>
+        <Color x:Key="SettingsBrandMutedDarkColor">#FF9AA2B1</Color>
+        <Color x:Key="SettingsKeycapShadowLightColor">#FF707780</Color>
+        <Color x:Key="SettingsKeycapShadowDarkColor">#FF000000</Color>
+        <Color x:Key="SettingsKeycapShadowColor">#FF707780</Color>
+        <SolidColorBrush x:Key="SettingsBrandAccentBrush"
+                         Color="{StaticResource SettingsBrandAccentLightColor}" />
+        <SolidColorBrush x:Key="SettingsBrandAccentSoftBrush"
+                         Color="#FFE6EDFA" />
+        <SolidColorBrush x:Key="SettingsBrandAccentInkBrush"
+                         Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="SettingsBrandMutedBrush"
+                         Color="#FF5D6470" />
+        <SolidColorBrush x:Key="SettingsDangerBrush"
+                         Color="#FFD13438" />
+
+        <Style x:Key="SettingsNavigationItemStyle"
+               TargetType="{x:Type RadioButton}">
+            <Setter Property="Margin"
+                    Value="0,0,0,2" />
+            <Setter Property="Padding"
+                    Value="11,9" />
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Left" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource SettingsBrandMutedBrush}" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="Cursor"
+                    Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Grid>
+                            <Border x:Name="NavigationBackground"
+                                    Padding="{TemplateBinding Padding}"
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="9">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="Center" />
+                            </Border>
+                            <Border x:Name="SelectionIndicator"
+                                    Width="3"
+                                    Height="20"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Center"
+                                    Background="{DynamicResource SettingsBrandAccentBrush}"
+                                    CornerRadius="0,3,3,0"
+                                    Visibility="Collapsed" />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter TargetName="NavigationBackground"
+                                        Property="Background"
+                                        Value="{DynamicResource SubtleFillColorSecondaryBrush}" />
+                                <Setter Property="Foreground"
+                                        Value="{DynamicResource TextFillColorPrimaryBrush}" />
+                            </Trigger>
+                            <Trigger Property="IsChecked"
+                                     Value="True">
+                                <Setter TargetName="NavigationBackground"
+                                        Property="Background"
+                                        Value="{DynamicResource SettingsBrandAccentSoftBrush}" />
+                                <Setter TargetName="SelectionIndicator"
+                                        Property="Visibility"
+                                        Value="Visible" />
+                                <Setter Property="Foreground"
+                                        Value="{DynamicResource TextFillColorPrimaryBrush}" />
+                                <Setter Property="FontWeight"
+                                        Value="SemiBold" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SettingsToggleStyle"
+               TargetType="{x:Type ToggleButton}">
+            <Setter Property="Width"
+                    Value="40" />
+            <Setter Property="Height"
+                    Value="23" />
+            <Setter Property="Cursor"
+                    Value="Hand" />
+            <Setter Property="Focusable"
+                    Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+                        <Grid Width="40"
+                              Height="23">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CheckStates">
+                                    <VisualState x:Name="Unchecked">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="CheckedTrack"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             To="0"
+                                                             Duration="0:0:0.16" />
+                                            <DoubleAnimation Storyboard.TargetName="ToggleKnobTransform"
+                                                             Storyboard.TargetProperty="X"
+                                                             To="0"
+                                                             Duration="0:0:0.16" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Checked">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="CheckedTrack"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             To="1"
+                                                             Duration="0:0:0.16" />
+                                            <DoubleAnimation Storyboard.TargetName="ToggleKnobTransform"
+                                                             Storyboard.TargetProperty="X"
+                                                             To="17"
+                                                             Duration="0:0:0.16" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Indeterminate">
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="CheckedTrack"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             To="0"
+                                                             Duration="0:0:0.16" />
+                                            <DoubleAnimation Storyboard.TargetName="ToggleKnobTransform"
+                                                             Storyboard.TargetProperty="X"
+                                                             To="8.5"
+                                                             Duration="0:0:0.16" />
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border Background="{DynamicResource ControlStrokeColorDefaultBrush}"
+                                    CornerRadius="12" />
+                            <Border x:Name="CheckedTrack"
+                                    Background="{DynamicResource SettingsBrandAccentBrush}"
+                                    CornerRadius="12"
+                                    Opacity="0" />
+                            <Ellipse Width="19"
+                                     Height="19"
+                                     Margin="2,0,0,0"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Center"
+                                     Fill="White">
+                                <Ellipse.Effect>
+                                    <DropShadowEffect BlurRadius="3"
+                                                      Direction="270"
+                                                      Opacity="0.35"
+                                                      ShadowDepth="1"
+                                                      Color="Black" />
+                                </Ellipse.Effect>
+                                <Ellipse.RenderTransform>
+                                    <TranslateTransform x:Name="ToggleKnobTransform" />
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SettingsRowStyle"
+               TargetType="{x:Type Border}">
+            <Setter Property="Padding"
+                    Value="2,15" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="BorderBrush"
+                    Value="{DynamicResource DividerStrokeColorDefaultBrush}" />
+            <Setter Property="BorderThickness"
+                    Value="0,1,0,0" />
+        </Style>
+
+        <Style x:Key="SettingsFirstRowStyle"
+               TargetType="{x:Type Border}"
+               BasedOn="{StaticResource SettingsRowStyle}">
+            <Setter Property="BorderThickness"
+                    Value="0" />
+        </Style>
+
+        <Style x:Key="SettingsDependentContentStyle"
+               TargetType="{x:Type StackPanel}">
+            <Setter Property="Opacity"
+                    Value="1" />
+            <Style.Triggers>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Opacity"
+                            Value="0.45" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SettingsSectionTitleStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize"
+                    Value="18" />
+            <Setter Property="FontWeight"
+                    Value="SemiBold" />
+            <Setter Property="Margin"
+                    Value="0,0,0,2" />
+        </Style>
+
+        <Style x:Key="SettingsSectionSubtitleStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin"
+                    Value="0,0,0,20" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource SettingsBrandMutedBrush}" />
+            <Setter Property="LineHeight"
+                    Value="19" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
+        <Style x:Key="SettingsRowLabelStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize"
+                    Value="14" />
+            <Setter Property="FontWeight"
+                    Value="SemiBold" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
+        <Style x:Key="SettingsRowDescriptionStyle"
+               TargetType="{x:Type TextBlock}">
+            <Setter Property="Margin"
+                    Value="0,3,18,0" />
+            <Setter Property="FontSize"
+                    Value="12.5" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource SettingsBrandMutedBrush}" />
+            <Setter Property="LineHeight"
+                    Value="18" />
+            <Setter Property="TextWrapping"
+                    Value="Wrap" />
+        </Style>
+
+        <Style x:Key="SettingsKeycapStyle"
+               TargetType="{x:Type Border}">
+            <Setter Property="MinWidth"
+                    Value="24" />
+            <Setter Property="Padding"
+                    Value="8,5" />
+            <Setter Property="Background"
+                    Value="{DynamicResource SolidBackgroundFillColorBaseBrush}" />
+            <Setter Property="BorderBrush"
+                    Value="{DynamicResource ControlStrokeColorDefaultBrush}" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="CornerRadius"
+                    Value="7" />
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="0"
+                                      Direction="270"
+                                      Opacity="0.42"
+                                      ShadowDepth="1.5"
+                                      Color="{DynamicResource SettingsKeycapShadowColor}" />
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SettingsLinkButtonStyle"
+               TargetType="{x:Type Button}">
+            <Setter Property="Padding"
+                    Value="4,5" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="FontSize"
+                    Value="12.5" />
+            <Setter Property="FontWeight"
+                    Value="SemiBold" />
+            <Setter Property="Cursor"
+                    Value="Hand" />
+            <Setter Property="Focusable"
+                    Value="False" />
+            <Setter Property="IsHitTestVisible"
+                    Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Padding="{TemplateBinding Padding}"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Foreground"
+                            Value="{DynamicResource TextFillColorDisabledBrush}" />
+                    <Setter Property="Cursor"
+                            Value="Arrow" />
+                    <Setter Property="Opacity"
+                            Value="0.55" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SettingsNumberTextBoxStyle"
+               TargetType="{x:Type TextBox}">
+            <Setter Property="Width"
+                    Value="74" />
+            <Setter Property="Padding"
+                    Value="10,7" />
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Right" />
+            <Setter Property="VerticalContentAlignment"
+                    Value="Center" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="BorderThickness"
+                    Value="0" />
+            <Setter Property="IsReadOnly"
+                    Value="True" />
+            <Setter Property="Focusable"
+                    Value="False" />
+            <Setter Property="IsHitTestVisible"
+                    Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      Padding="{TemplateBinding Padding}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SettingsNumberFieldStyle"
+               TargetType="{x:Type Border}">
+            <Setter Property="Width"
+                    Value="110" />
+            <Setter Property="VerticalAlignment"
+                    Value="Center" />
+            <Setter Property="Background"
+                    Value="{DynamicResource SolidBackgroundFillColorBaseBrush}" />
+            <Setter Property="BorderBrush"
+                    Value="{DynamicResource ControlStrokeColorDefaultBrush}" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="CornerRadius"
+                    Value="8" />
+        </Style>
+
+        <Style x:Key="SettingsGhostButtonStyle"
+               TargetType="{x:Type Button}">
+            <Setter Property="Padding"
+                    Value="13,7" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="BorderBrush"
+                    Value="{DynamicResource ControlStrokeColorDefaultBrush}" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="FontSize"
+                    Value="12.5" />
+            <Setter Property="FontWeight"
+                    Value="SemiBold" />
+            <Setter Property="Cursor"
+                    Value="Hand" />
+            <Setter Property="Focusable"
+                    Value="False" />
+            <Setter Property="IsHitTestVisible"
+                    Value="False" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="ButtonBorder"
+                                Padding="{TemplateBinding Padding}"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="9">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Foreground"
+                            Value="{DynamicResource TextFillColorDisabledBrush}" />
+                    <Setter Property="Cursor"
+                            Value="Arrow" />
+                    <Setter Property="Opacity"
+                            Value="0.55" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SettingsAccentButtonStyle"
+               TargetType="{x:Type Button}"
+               BasedOn="{StaticResource SettingsGhostButtonStyle}">
+            <Setter Property="Padding"
+                    Value="18,9" />
+            <Setter Property="FontSize"
+                    Value="13.5" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource SettingsBrandAccentInkBrush}" />
+            <Setter Property="Background"
+                    Value="{DynamicResource SettingsBrandAccentBrush}" />
+            <Setter Property="BorderBrush"
+                    Value="{DynamicResource SettingsBrandAccentBrush}" />
+            <Style.Triggers>
+                <Trigger Property="IsEnabled"
+                         Value="False">
+                    <Setter Property="Foreground"
+                            Value="{DynamicResource TextFillColorDisabledBrush}" />
+                    <Setter Property="Background"
+                            Value="{DynamicResource ControlFillColorDisabledBrush}" />
+                    <Setter Property="BorderBrush"
+                            Value="{DynamicResource ControlStrokeColorDefaultBrush}" />
+                    <Setter Property="Cursor"
+                            Value="Arrow" />
+                    <Setter Property="Opacity"
+                            Value="1" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SettingsCloseButtonStyle"
+               TargetType="{x:Type Button}">
+            <Setter Property="Width"
+                    Value="26" />
+            <Setter Property="Height"
+                    Value="26" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource SettingsBrandMutedBrush}" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="BorderBrush"
+                    Value="Transparent" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="Padding"
+                    Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="CloseBackground"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8">
+                            <Path Width="12"
+                                  Height="12"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Data="M1,1 L11,11 M11,1 L1,11"
+                                  Stretch="None"
+                                  Stroke="{TemplateBinding Foreground}"
+                                  StrokeThickness="1.7"
+                                  StrokeStartLineCap="Round"
+                                  StrokeEndLineCap="Round" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter TargetName="CloseBackground"
+                                        Property="Background"
+                                        Value="#FFE5484D" />
+                                <Setter TargetName="CloseBackground"
+                                        Property="BorderBrush"
+                                        Value="#FFE5484D" />
+                                <Setter Property="Foreground"
+                                        Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SettingsIconButtonStyle"
+               TargetType="{x:Type Button}">
+            <Setter Property="Width"
+                    Value="30" />
+            <Setter Property="Height"
+                    Value="30" />
+            <Setter Property="Foreground"
+                    Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="BorderBrush"
+                    Value="Transparent" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="Padding"
+                    Value="0" />
+            <Setter Property="Cursor"
+                    Value="Hand" />
+            <Setter Property="FocusVisualStyle"
+                    Value="{x:Null}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="IconBackground"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+                                <Setter TargetName="IconBackground"
+                                        Property="Background"
+                                        Value="{DynamicResource SubtleFillColorSecondaryBrush}" />
+                                <Setter Property="Foreground"
+                                        Value="{DynamicResource TextFillColorPrimaryBrush}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="{DynamicResource SolidBackgroundFillColorBaseBrush}"
+            BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}"
+            BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="46" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+                  Margin="15,0,12,0"
+                  Background="Transparent"
+                  MouseLeftButtonDown="OnHeaderMouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Border Width="20"
+                        Height="20"
+                        VerticalAlignment="Center"
+                        CornerRadius="5"
+                        ClipToBounds="True">
+                    <Image RenderOptions.BitmapScalingMode="HighQuality"
+                           Source="pack://application:,,,/BezBukv.App;component/Assets/logo.png"
+                           Stretch="Uniform" />
+                </Border>
+                <TextBlock Grid.Column="1"
+                           Margin="10,0,0,0"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"
+                           Text="{Binding [Settings_About_ProductName]}" />
+                <TextBlock Grid.Column="2"
+                           Margin="5,0,0,0"
+                           VerticalAlignment="Center"
+                           Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                           FontWeight="Normal"
+                           Text="{Binding [Settings_Header_SettingsSuffix]}" />
+                <Button x:Name="CloseButton"
+                        Grid.Column="3"
+                        VerticalAlignment="Center"
+                        AutomationProperties.Name="{Binding [Settings_Close]}"
+                        Style="{StaticResource SettingsCloseButtonStyle}"
+                        Click="OnCloseClick" />
+            </Grid>
+
+            <Border Grid.Row="0"
+                    Height="1"
+                    VerticalAlignment="Bottom"
+                    Background="{DynamicResource DividerStrokeColorDefaultBrush}" />
+
+            <Grid Grid.Row="1"
+                  Background="{DynamicResource LayerFillColorAltBrush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="196" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                        Padding="10,12"
+                        BorderBrush="{DynamicResource DividerStrokeColorDefaultBrush}"
+                        BorderThickness="0,0,1,0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Row="0">
+                            <RadioButton x:Name="GeneralNavigationButton"
+                                         GroupName="SettingsNavigation"
+                                         IsChecked="True"
+                                         Style="{StaticResource SettingsNavigationItemStyle}"
+                                         Checked="OnNavigationChecked">
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid Width="17"
+                                          Height="17">
+                                        <Ellipse Width="5"
+                                                 Height="5"
+                                                 Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
+                                                 StrokeThickness="1.7" />
+                                        <Path Data="M8.5,0.8 L8.5,3 M8.5,14 L8.5,16.2 M0.8,8.5 L3,8.5 M14,8.5 L16.2,8.5 M3.05,3.05 L4.6,4.6 M12.4,12.4 L13.95,13.95 M13.95,3.05 L12.4,4.6 M4.6,12.4 L3.05,13.95"
+                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
+                                              StrokeThickness="1.7"
+                                              StrokeStartLineCap="Round"
+                                              StrokeEndLineCap="Round" />
+                                    </Grid>
+                                    <TextBlock Margin="11,0,0,0"
+                                               VerticalAlignment="Center"
+                                               Text="{Binding [Settings_Nav_General]}" />
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton x:Name="CorrectionNavigationButton"
+                                         GroupName="SettingsNavigation"
+                                         Style="{StaticResource SettingsNavigationItemStyle}"
+                                         Checked="OnNavigationChecked">
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid Width="17"
+                                          Height="17">
+                                        <Path Data="M1,5 L11,5 M1,5 L4,2 M1,5 L4,8 M16,12 L6,12 M16,12 L13,9 M16,12 L13,15"
+                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
+                                              StrokeThickness="1.7"
+                                              StrokeStartLineCap="Round"
+                                              StrokeEndLineCap="Round"
+                                              StrokeLineJoin="Round" />
+                                    </Grid>
+                                    <TextBlock Margin="11,0,0,0"
+                                               VerticalAlignment="Center"
+                                               Text="{Binding [Settings_Nav_Correction]}" />
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton x:Name="PeekNavigationButton"
+                                         GroupName="SettingsNavigation"
+                                         Style="{StaticResource SettingsNavigationItemStyle}"
+                                         Checked="OnNavigationChecked">
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid Width="17"
+                                          Height="17">
+                                        <Path Data="M2,3 L15,3 Q16,3 16,4 L16,13 Q16,14 15,14 L2,14 Q1,14 1,13 L1,4 Q1,3 2,3 Z M4,7 L4.05,7 M7,7 L7.05,7 M10,7 L10.05,7 M5,11 L12,11"
+                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
+                                              StrokeThickness="1.5"
+                                              StrokeStartLineCap="Round"
+                                              StrokeEndLineCap="Round"
+                                              StrokeLineJoin="Round" />
+                                    </Grid>
+                                    <TextBlock Margin="11,0,0,0"
+                                               VerticalAlignment="Center"
+                                               Text="{Binding [Settings_Nav_Peek]}" />
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton x:Name="AdvancedNavigationButton"
+                                         GroupName="SettingsNavigation"
+                                         Style="{StaticResource SettingsNavigationItemStyle}"
+                                         Checked="OnNavigationChecked">
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid Width="17"
+                                          Height="17">
+                                        <Path Data="M4,1 L4,6 M4,11 L4,16 M8.5,1 L8.5,10 M8.5,15 L8.5,16 M13,1 L13,3 M13,8 L13,16 M2,8.5 A2,2 0 1 0 6,8.5 A2,2 0 1 0 2,8.5 M6.5,12.5 A2,2 0 1 0 10.5,12.5 A2,2 0 1 0 6.5,12.5 M11,5.5 A2,2 0 1 0 15,5.5 A2,2 0 1 0 11,5.5"
+                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
+                                              StrokeThickness="1.5"
+                                              StrokeStartLineCap="Round"
+                                              StrokeEndLineCap="Round" />
+                                    </Grid>
+                                    <TextBlock Margin="11,0,0,0"
+                                               VerticalAlignment="Center"
+                                               Text="{Binding [Settings_Nav_Advanced]}" />
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton x:Name="GuideNavigationButton"
+                                         GroupName="SettingsNavigation"
+                                         Style="{StaticResource SettingsNavigationItemStyle}"
+                                         Checked="OnNavigationChecked">
+                                <StackPanel Orientation="Horizontal">
+                                    <Grid Width="17"
+                                          Height="17">
+                                        <Path Data="M3.5,1.5 L10.5,1.5 Q13,1.5 13,4 L13,15.5 L10,13.5 L7,15.5 L7,1.5 M3.5,1.5 Q1,1.5 1,4 L1,14.5 Q1,16.5 3,16.5 L7,16.5"
+                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}}"
+                                              StrokeThickness="1.4"
+                                              StrokeStartLineCap="Round"
+                                              StrokeEndLineCap="Round"
+                                              StrokeLineJoin="Round" />
+                                    </Grid>
+                                    <TextBlock Margin="11,0,0,0"
+                                               VerticalAlignment="Center"
+                                               Text="{Binding [Settings_Nav_Guide]}" />
+                                </StackPanel>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <Border Grid.Row="2"
+                                Margin="6,8,6,0"
+                                Padding="0,11,0,0">
+                            <StackPanel HorizontalAlignment="Stretch">
+                                <Image Width="58"
+                                       Height="58"
+                                       HorizontalAlignment="Center"
+                                       RenderOptions.BitmapScalingMode="HighQuality"
+                                       Source="pack://application:,,,/BezBukv.App;component/Assets/logo.png"
+                                       Stretch="Uniform" />
+                                <TextBlock Margin="0,6,0,0"
+                                           HorizontalAlignment="Center"
+                                           FontSize="15"
+                                           FontWeight="SemiBold"
+                                           Text="{Binding [Settings_About_ProductName]}"
+                                           TextAlignment="Center" />
+                                <TextBlock x:Name="AboutVersionText"
+                                           Margin="0,1,0,0"
+                                           HorizontalAlignment="Center"
+                                           FontSize="11"
+                                           Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                           TextAlignment="Center" />
+                                <Button x:Name="SupportButton"
+                                        Margin="0,22,0,0"
+                                        HorizontalAlignment="Stretch"
+                                        Padding="10,7"
+                                        Content="{Binding [Settings_About_SupportButton]}"
+                                        Focusable="True"
+                                        FontSize="12.5"
+                                        IsHitTestVisible="True"
+                                        Style="{StaticResource SettingsAccentButtonStyle}"
+                                        Click="OnSupportClick" />
+                                <TextBlock Margin="0,8,0,0"
+                                           FontSize="10.5"
+                                           Foreground="{DynamicResource SettingsBrandMutedBrush}"
+                                           LineHeight="15"
+                                           Text="{Binding [Settings_About_SupportDescription]}"
+                                           TextAlignment="Center"
+                                           TextWrapping="Wrap" />
+                                <StackPanel Margin="0,4,0,0"
+                                            HorizontalAlignment="Center">
+                                    <Button x:Name="SourceCodeButton"
+                                            Padding="4,2"
+                                            Content="{Binding [Settings_About_SourceCode]}"
+                                            Focusable="True"
+                                            FontSize="12"
+                                            IsHitTestVisible="True"
+                                            Style="{StaticResource SettingsLinkButtonStyle}"
+                                            Click="OnSourceCodeClick" />
+                                    <Button x:Name="ReportProblemButton"
+                                            Padding="4,2"
+                                            Content="{Binding [Settings_About_ReportProblem]}"
+                                            Focusable="True"
+                                            FontSize="12"
+                                            IsHitTestVisible="True"
+                                            Style="{StaticResource SettingsLinkButtonStyle}"
+                                            Click="OnReportProblemClick" />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Grid Grid.Column="1"
+                      Margin="30,26">
+                    <ScrollViewer x:Name="GeneralPanel"
+                                  VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="0,0,10,0">
+                            <TextBlock Style="{StaticResource SettingsSectionTitleStyle}"
+                                       Text="{Binding [Settings_General_Title]}" />
+                            <TextBlock Style="{StaticResource SettingsSectionSubtitleStyle}"
+                                       Text="{Binding [Settings_General_Subtitle]}" />
+
+                            <Border Style="{StaticResource SettingsFirstRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_General_Language]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_General_LanguageDescription]}" />
+                                    </StackPanel>
+                                    <ComboBox x:Name="LanguageComboBox"
+                                              Grid.Column="1"
+                                              MinWidth="130"
+                                              MinHeight="34"
+                                              VerticalAlignment="Center"
+                                              Focusable="True"
+                                              IsHitTestVisible="True"
+                                              SelectedIndex="0">
+                                        <ComboBoxItem Content="{Binding [Settings_General_LanguageSystem]}" />
+                                        <ComboBoxItem Content="{Binding [Settings_General_LanguageEnglish]}" />
+                                        <ComboBoxItem Content="{Binding [Settings_General_LanguageRussian]}" />
+                                    </ComboBox>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_General_Theme]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_General_ThemeDescription]}" />
+                                    </StackPanel>
+                                    <ComboBox x:Name="ThemeComboBox"
+                                              Grid.Column="1"
+                                              MinWidth="130"
+                                              MinHeight="34"
+                                              VerticalAlignment="Center"
+                                              Focusable="True"
+                                              IsHitTestVisible="True"
+                                              SelectedIndex="0">
+                                        <ComboBoxItem Content="{Binding [Settings_General_ThemeSystem]}" />
+                                        <ComboBoxItem Content="{Binding [Settings_General_ThemeLight]}" />
+                                        <ComboBoxItem Content="{Binding [Settings_General_ThemeDark]}" />
+                                    </ComboBox>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_General_StartWithWindows]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_General_StartWithWindowsDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="StartWithWindowsToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <ScrollViewer x:Name="CorrectionPanel"
+                                  Visibility="Collapsed"
+                                  VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="0,0,10,0">
+                            <TextBlock Style="{StaticResource SettingsSectionTitleStyle}"
+                                       Text="{Binding [Settings_Correction_Title]}" />
+                            <TextBlock Style="{StaticResource SettingsSectionSubtitleStyle}"
+                                       Text="{Binding [Settings_Correction_Subtitle]}" />
+
+                            <Border Style="{StaticResource SettingsFirstRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Correction_Enable]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Correction_EnableDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="CorrectionEnabledToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  IsChecked="True"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Correction_Shortcut]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Correction_ShortcutDescription]}" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1"
+                                                VerticalAlignment="Center"
+                                                Orientation="Horizontal">
+                                        <Border x:Name="CorrectionHotkeyConflictIcon"
+                                                Margin="0,0,7,0"
+                                                Padding="3"
+                                                VerticalAlignment="Center"
+                                                Background="{DynamicResource SystemFillColorCautionBackgroundBrush}"
+                                                CornerRadius="5"
+                                                ToolTip="{Binding [Settings_Hotkey_ConflictTooltip]}"
+                                                Visibility="Collapsed">
+                                            <Path Width="15"
+                                                  Height="15"
+                                                  Data="M8,1.5 L15,14.5 L1,14.5 Z M8,5.5 L8,10 M8,12.5 L8,12.55"
+                                                  Stretch="Fill"
+                                                  Stroke="{DynamicResource SystemFillColorCautionBrush}"
+                                                  StrokeThickness="1.5"
+                                                  StrokeStartLineCap="Round"
+                                                  StrokeEndLineCap="Round"
+                                                  StrokeLineJoin="Round" />
+                                        </Border>
+                                        <Border x:Name="CorrectionHotkeyModifiersKeycap"
+                                                Style="{StaticResource SettingsKeycapStyle}">
+                                            <TextBlock x:Name="CorrectionHotkeyModifiersText"
+                                                       HorizontalAlignment="Center"
+                                                       FontSize="12"
+                                                       FontWeight="SemiBold" />
+                                        </Border>
+                                        <TextBlock x:Name="CorrectionHotkeySeparator"
+                                                   Margin="7,0"
+                                                   VerticalAlignment="Center"
+                                                   Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                                   Text="{Binding [Settings_Hotkey_Separator]}" />
+                                        <Border Style="{StaticResource SettingsKeycapStyle}">
+                                            <TextBlock x:Name="CorrectionHotkeyKeyText"
+                                                       HorizontalAlignment="Center"
+                                                       FontSize="12"
+                                                       FontWeight="SemiBold" />
+                                        </Border>
+                                        <Button x:Name="CorrectionHotkeyChangeButton"
+                                                Margin="5,0,0,0"
+                                                Content="{Binding [Settings_ChangeShortcut]}"
+                                                Focusable="True"
+                                                IsHitTestVisible="True"
+                                                ToolTip="{Binding [Settings_Hotkey_RecordingHint]}"
+                                                Style="{StaticResource SettingsLinkButtonStyle}"
+                                                Click="OnCorrectionHotkeyChangeClick"
+                                                LostKeyboardFocus="OnCorrectionHotkeyChangeLostKeyboardFocus" />
+                                        <Button x:Name="CorrectionHotkeyClearButton"
+                                                Margin="5,0,0,0"
+                                                Content="{Binding [Settings_Hotkey_Clear]}"
+                                                Focusable="True"
+                                                IsHitTestVisible="True"
+                                                Visibility="Collapsed"
+                                                Style="{StaticResource SettingsLinkButtonStyle}"
+                                                Click="OnCorrectionHotkeyClearClick"
+                                                LostKeyboardFocus="OnCorrectionHotkeyChangeLostKeyboardFocus" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <StackPanel IsEnabled="{Binding IsChecked, ElementName=CorrectionEnabledToggle}"
+                                        Style="{StaticResource SettingsDependentContentStyle}">
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Correction_SwitchLayout]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Correction_SwitchLayoutDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="LayoutAutoSwitchToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  IsChecked="True"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            </StackPanel>
+
+                            <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                       Margin="0,20,18,0"
+                                       Text="{Binding [Settings_Correction_ResultWindowHint]}" />
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <ScrollViewer x:Name="PeekPanel"
+                                  Visibility="Collapsed"
+                                  VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="0,0,10,0">
+                            <TextBlock Style="{StaticResource SettingsSectionTitleStyle}"
+                                       Text="{Binding [Settings_Peek_Title]}" />
+                            <TextBlock Style="{StaticResource SettingsSectionSubtitleStyle}"
+                                       Text="{Binding [Settings_Peek_Subtitle]}" />
+
+                            <Border Style="{StaticResource SettingsFirstRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_Enable]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_EnableDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="PeekEnabledToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  IsChecked="True"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_Shortcut]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_ShortcutDescription]}" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1"
+                                                VerticalAlignment="Center"
+                                                Orientation="Horizontal">
+                                        <Border x:Name="PeekHotkeyConflictIcon"
+                                                Margin="0,0,7,0"
+                                                Padding="3"
+                                                VerticalAlignment="Center"
+                                                Background="{DynamicResource SystemFillColorCautionBackgroundBrush}"
+                                                CornerRadius="5"
+                                                ToolTip="{Binding [Settings_Hotkey_ConflictTooltip]}"
+                                                Visibility="Collapsed">
+                                            <Path Width="15"
+                                                  Height="15"
+                                                  Data="M8,1.5 L15,14.5 L1,14.5 Z M8,5.5 L8,10 M8,12.5 L8,12.55"
+                                                  Stretch="Fill"
+                                                  Stroke="{DynamicResource SystemFillColorCautionBrush}"
+                                                  StrokeThickness="1.5"
+                                                  StrokeStartLineCap="Round"
+                                                  StrokeEndLineCap="Round"
+                                                  StrokeLineJoin="Round" />
+                                        </Border>
+                                        <Border x:Name="PeekHotkeyModifiersKeycap"
+                                                Style="{StaticResource SettingsKeycapStyle}">
+                                            <TextBlock x:Name="PeekHotkeyModifiersText"
+                                                       HorizontalAlignment="Center"
+                                                       FontSize="12"
+                                                       FontWeight="SemiBold"
+                                                       Text="{Binding [Settings_Hotkey_Control]}" />
+                                        </Border>
+                                        <TextBlock x:Name="PeekHotkeySeparator"
+                                                   Margin="7,0"
+                                                   VerticalAlignment="Center"
+                                                   Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                                   Text="{Binding [Settings_Hotkey_Separator]}" />
+                                        <Border Style="{StaticResource SettingsKeycapStyle}">
+                                            <TextBlock x:Name="PeekHotkeyKeyText"
+                                                       HorizontalAlignment="Center"
+                                                       FontSize="12"
+                                                       FontWeight="SemiBold"
+                                                       Text="{Binding [Settings_Hotkey_PeekKey]}" />
+                                        </Border>
+                                        <Button x:Name="PeekHotkeyChangeButton"
+                                                Margin="5,0,0,0"
+                                                Content="{Binding [Settings_ChangeShortcut]}"
+                                                Focusable="True"
+                                                IsHitTestVisible="True"
+                                                ToolTip="{Binding [Settings_Hotkey_RecordingHint]}"
+                                                Style="{StaticResource SettingsLinkButtonStyle}"
+                                                Click="OnPeekHotkeyChangeClick"
+                                                LostKeyboardFocus="OnPeekHotkeyChangeLostKeyboardFocus" />
+                                        <Button x:Name="PeekHotkeyClearButton"
+                                                Margin="5,0,0,0"
+                                                Content="{Binding [Settings_Hotkey_Clear]}"
+                                                Focusable="True"
+                                                IsHitTestVisible="True"
+                                                Visibility="Collapsed"
+                                                Style="{StaticResource SettingsLinkButtonStyle}"
+                                                Click="OnPeekHotkeyClearClick"
+                                                LostKeyboardFocus="OnPeekHotkeyChangeLostKeyboardFocus" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_KeyboardProfile]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_KeyboardProfileDescription]}" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1"
+                                                VerticalAlignment="Center"
+                                                Orientation="Horizontal">
+                                        <Border Style="{StaticResource SettingsKeycapStyle}">
+                                            <TextBlock x:Name="KeyboardProfileValueText"
+                                                       HorizontalAlignment="Center"
+                                                       AutomationProperties.Name="{Binding [Settings_Peek_KeyboardProfileAutomationName]}"
+                                                       FontSize="12"
+                                                       FontWeight="SemiBold" />
+                                        </Border>
+                                        <Button x:Name="KeyboardProfileChangeButton"
+                                                Margin="5,0,0,0"
+                                                Content="{Binding [Settings_ChangeShortcut]}"
+                                                Focusable="True"
+                                                IsHitTestVisible="True"
+                                                Style="{StaticResource SettingsLinkButtonStyle}"
+                                                Click="OnKeyboardProfileChangeClick" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <StackPanel IsEnabled="{Binding IsChecked, ElementName=PeekEnabledToggle}"
+                                        Style="{StaticResource SettingsDependentContentStyle}">
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_AutoPeek]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_AutoPeekDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="AutoPeekEnabledToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            <StackPanel IsEnabled="{Binding IsChecked, ElementName=AutoPeekEnabledToggle}"
+                                        Style="{StaticResource SettingsDependentContentStyle}">
+                                <Border Style="{StaticResource SettingsRowStyle}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock VerticalAlignment="Center"
+                                                   Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_AutoPeekLinger]}" />
+                                        <Border x:Name="AutoPeekLingerFieldBorder"
+                                                Grid.Column="1"
+                                                Style="{StaticResource SettingsNumberFieldStyle}">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="74" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <TextBox x:Name="AutoPeekLingerTextBox"
+                                                         Grid.Column="0"
+                                                         Focusable="True"
+                                                         IsHitTestVisible="True"
+                                                         IsReadOnly="False"
+                                                         Style="{StaticResource SettingsNumberTextBoxStyle}"
+                                                         GotKeyboardFocus="OnAdvancedValueGotKeyboardFocus"
+                                                         KeyDown="OnAdvancedValueKeyDown"
+                                                         LostKeyboardFocus="OnAdvancedValueLostKeyboardFocus"
+                                                         TextChanged="OnAdvancedValueTextChanged" />
+                                                <TextBlock Grid.Column="1"
+                                                           Margin="0,0,10,0"
+                                                           VerticalAlignment="Center"
+                                                           FontSize="12"
+                                                           Foreground="{DynamicResource SettingsBrandMutedBrush}"
+                                                           Text="{Binding [Settings_Unit_Milliseconds]}" />
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </StackPanel>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_Animate]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_AnimateDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="PeekAnimationToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                   IsChecked="True"
+                                                   Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_Opacity]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_OpacityDescription]}" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1"
+                                                VerticalAlignment="Center"
+                                                Orientation="Horizontal">
+                                        <Slider x:Name="PeekOpacitySlider"
+                                                Width="158"
+                                                VerticalAlignment="Center"
+                                                AutomationProperties.Name="{Binding [Settings_Peek_Opacity]}"
+                                                IsMoveToPointEnabled="True"
+                                                IsSnapToTickEnabled="True"
+                                                LargeChange="5"
+                                                Maximum="100"
+                                                Minimum="20"
+                                                SmallChange="1"
+                                                TickFrequency="1" />
+                                        <TextBlock x:Name="PeekOpacityValueText"
+                                                   MinWidth="44"
+                                                   Margin="12,0,0,0"
+                                                   VerticalAlignment="Center"
+                                                   FontSize="12.5"
+                                                   FontWeight="SemiBold"
+                                                   TextAlignment="Right" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_Scale]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_ScaleDescription]}" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1"
+                                                VerticalAlignment="Center"
+                                                Orientation="Horizontal">
+                                        <Slider x:Name="PeekScaleSlider"
+                                                Width="158"
+                                                VerticalAlignment="Center"
+                                                AutomationProperties.Name="{Binding [Settings_Peek_Scale]}"
+                                                IsMoveToPointEnabled="True"
+                                                IsSnapToTickEnabled="True"
+                                                LargeChange="10"
+                                                Maximum="200"
+                                                Minimum="50"
+                                                SmallChange="5"
+                                                TickFrequency="5" />
+                                        <TextBlock x:Name="PeekScaleValueText"
+                                                   MinWidth="44"
+                                                   Margin="12,0,0,0"
+                                                   VerticalAlignment="Center"
+                                                   FontSize="12.5"
+                                                   FontWeight="SemiBold"
+                                                   TextAlignment="Right" />
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+
+                            <TextBlock Margin="0,22,0,2"
+                                       FontSize="12"
+                                       FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                       Text="{Binding [Settings_Peek_KeyCapture]}"
+                                       TextWrapping="Wrap" />
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_CaptureNumberRow]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_CaptureNumberRowDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="PeekBlockNumberRowToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  IsChecked="True"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Peek_ShowServiceKeys]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Peek_ShowServiceKeysDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="PeekShowServiceKeysToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  IsChecked="False"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <ScrollViewer x:Name="AdvancedPanel"
+                                  Visibility="Collapsed"
+                                  VerticalScrollBarVisibility="Auto">
+                        <StackPanel Margin="0,0,10,0">
+                            <TextBlock Style="{StaticResource SettingsSectionTitleStyle}"
+                                       Text="{Binding [Settings_Advanced_Title]}" />
+                            <TextBlock Style="{StaticResource SettingsSectionSubtitleStyle}"
+                                       Text="{Binding [Settings_Advanced_Subtitle]}" />
+
+                            <Border Margin="0,0,16,18"
+                                    Padding="13,11"
+                                    HorizontalAlignment="Left"
+                                    MaxWidth="740"
+                                    Background="{DynamicResource SystemFillColorCautionBackgroundBrush}"
+                                    BorderBrush="{DynamicResource SystemFillColorCautionBrush}"
+                                    BorderThickness="1"
+                                    CornerRadius="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="16" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Path Width="16"
+                                          Height="16"
+                                          VerticalAlignment="Top"
+                                          Data="M8,1.5 L15,14.5 L1,14.5 Z M8,5.5 L8,10 M8,12.5 L8,12.55"
+                                          Stretch="Fill"
+                                          Stroke="{DynamicResource SystemFillColorCautionBrush}"
+                                          StrokeThickness="1.5"
+                                          StrokeStartLineCap="Round"
+                                          StrokeEndLineCap="Round"
+                                          StrokeLineJoin="Round" />
+                                    <TextBlock Grid.Column="1"
+                                               Margin="11,0,0,0"
+                                               FontSize="12.5"
+                                               Foreground="{DynamicResource SystemFillColorCautionBrush}"
+                                               LineHeight="18"
+                                               Text="{Binding [Settings_Advanced_Warning]}"
+                                               TextWrapping="Wrap" />
+                                </Grid>
+                            </Border>
+
+                            <TextBlock Margin="0,22,0,2"
+                                       FontSize="12"
+                                       FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                       Text="{Binding [Settings_Advanced_CorrectionGroup]}"
+                                       TextWrapping="Wrap" />
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Advanced_CopyTimeout]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Advanced_CopyTimeoutDescription]}" />
+                                    </StackPanel>
+                                    <Border x:Name="CopyTimeoutFieldBorder"
+                                            Grid.Column="1"
+                                            Style="{StaticResource SettingsNumberFieldStyle}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="74" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox x:Name="CopyTimeoutTextBox"
+                                                     Grid.Column="0"
+                                                     Focusable="True"
+                                                     IsHitTestVisible="True"
+                                                     IsReadOnly="False"
+                                                     Style="{StaticResource SettingsNumberTextBoxStyle}"
+                                                     Text="{Binding [Settings_Advanced_CopyTimeoutValue], Mode=OneTime}"
+                                                     GotKeyboardFocus="OnAdvancedValueGotKeyboardFocus"
+                                                     KeyDown="OnAdvancedValueKeyDown"
+                                                     LostKeyboardFocus="OnAdvancedValueLostKeyboardFocus"
+                                                     TextChanged="OnAdvancedValueTextChanged" />
+                                            <TextBlock Grid.Column="1"
+                                                       Margin="0,0,10,0"
+                                                       VerticalAlignment="Center"
+                                                       FontSize="12"
+                                                       Foreground="{DynamicResource SettingsBrandMutedBrush}"
+                                                       Text="{Binding [Settings_Unit_Milliseconds]}" />
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Advanced_MaxTextSize]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Advanced_MaxTextSizeDescription]}" />
+                                    </StackPanel>
+                                    <Border x:Name="TextLimitKilobytesFieldBorder"
+                                            Grid.Column="1"
+                                            Style="{StaticResource SettingsNumberFieldStyle}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="74" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox x:Name="TextLimitKilobytesTextBox"
+                                                     Grid.Column="0"
+                                                     Padding="10,7,14,7"
+                                                     Focusable="True"
+                                                     IsHitTestVisible="True"
+                                                     IsReadOnly="False"
+                                                     Style="{StaticResource SettingsNumberTextBoxStyle}"
+                                                     Text="{Binding [Settings_Advanced_MaxTextSizeValue], Mode=OneTime}"
+                                                     GotKeyboardFocus="OnAdvancedValueGotKeyboardFocus"
+                                                     KeyDown="OnAdvancedValueKeyDown"
+                                                     LostKeyboardFocus="OnAdvancedValueLostKeyboardFocus"
+                                                     TextChanged="OnAdvancedValueTextChanged" />
+                                            <TextBlock Grid.Column="0"
+                                                       Width="8"
+                                                       Margin="0,0,6,0"
+                                                       HorizontalAlignment="Right"
+                                                       VerticalAlignment="Center"
+                                                       IsHitTestVisible="False"
+                                                       FontSize="12"
+                                                       Foreground="{DynamicResource SettingsBrandMutedBrush}"
+                                                       Text="K" />
+                                            <TextBlock Grid.Column="1"
+                                                       Margin="0,0,4,0"
+                                                       VerticalAlignment="Center"
+                                                       FontSize="12"
+                                                       Foreground="{DynamicResource SettingsBrandMutedBrush}"
+                                                       Text="{Binding [Settings_Unit_Characters]}" />
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Advanced_ClipboardRestoreDelay]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Advanced_ClipboardRestoreDelayDescription]}" />
+                                    </StackPanel>
+                                    <Border x:Name="ClipboardRestoreDelayFieldBorder"
+                                            Grid.Column="1"
+                                            Style="{StaticResource SettingsNumberFieldStyle}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="74" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox x:Name="ClipboardRestoreDelayTextBox"
+                                                     Grid.Column="0"
+                                                     Focusable="True"
+                                                     IsHitTestVisible="True"
+                                                     IsReadOnly="False"
+                                                     Style="{StaticResource SettingsNumberTextBoxStyle}"
+                                                     Text="{Binding [Settings_Advanced_ClipboardRestoreDelayValue], Mode=OneTime}"
+                                                     GotKeyboardFocus="OnAdvancedValueGotKeyboardFocus"
+                                                     KeyDown="OnAdvancedValueKeyDown"
+                                                     LostKeyboardFocus="OnAdvancedValueLostKeyboardFocus"
+                                                     TextChanged="OnAdvancedValueTextChanged" />
+                                            <TextBlock Grid.Column="1"
+                                                       Margin="0,0,10,0"
+                                                       VerticalAlignment="Center"
+                                                       FontSize="12"
+                                                       Foreground="{DynamicResource SettingsBrandMutedBrush}"
+                                                       Text="{Binding [Settings_Unit_Milliseconds]}" />
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                            </Border>
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Correction_TryPasteUnknown]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Correction_TryPasteUnknownDescription]}" />
+                                    </StackPanel>
+                                    <ToggleButton x:Name="PasteIntoUnknownToggle"
+                                                  Grid.Column="1"
+                                                  VerticalAlignment="Center"
+                                                  Style="{StaticResource SettingsToggleStyle}" />
+                                </Grid>
+                            </Border>
+
+                            <TextBlock Margin="0,22,0,2"
+                                       FontSize="12"
+                                       FontWeight="SemiBold"
+                                       Foreground="{DynamicResource TextFillColorTertiaryBrush}"
+                                       Text="{Binding [Settings_Advanced_PeekGroup]}"
+                                       TextWrapping="Wrap" />
+
+                            <Border Style="{StaticResource SettingsRowStyle}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel VerticalAlignment="Center">
+                                        <TextBlock Style="{StaticResource SettingsRowLabelStyle}"
+                                                   Text="{Binding [Settings_Advanced_PeekAutoExit]}" />
+                                        <TextBlock Style="{StaticResource SettingsRowDescriptionStyle}"
+                                                   Text="{Binding [Settings_Advanced_PeekAutoExitDescription]}" />
+                                    </StackPanel>
+                                    <Border x:Name="PeekAutoExitFieldBorder"
+                                            Grid.Column="1"
+                                            Style="{StaticResource SettingsNumberFieldStyle}">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="74" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox x:Name="PeekAutoExitTextBox"
+                                                     Grid.Column="0"
+                                                     Focusable="True"
+                                                     IsHitTestVisible="True"
+                                                     IsReadOnly="False"
+                                                     Style="{StaticResource SettingsNumberTextBoxStyle}"
+                                                     Text="{Binding [Settings_Advanced_PeekAutoExitValue], Mode=OneTime}"
+                                                     GotKeyboardFocus="OnAdvancedValueGotKeyboardFocus"
+                                                     KeyDown="OnAdvancedValueKeyDown"
+                                                     LostKeyboardFocus="OnAdvancedValueLostKeyboardFocus"
+                                                     TextChanged="OnAdvancedValueTextChanged" />
+                                            <TextBlock Grid.Column="1"
+                                                       Margin="0,0,10,0"
+                                                       VerticalAlignment="Center"
+                                                       FontSize="12"
+                                                       Foreground="{DynamicResource SettingsBrandMutedBrush}"
+                                                       Text="{Binding [Settings_Unit_Seconds]}" />
+                                        </Grid>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <ScrollViewer x:Name="GuidePanel"
+                                  Visibility="Collapsed"
+                                  VerticalScrollBarVisibility="Auto">
+                        <Grid>
+                            <local:GuideContentControl />
+                            <Button x:Name="OpenGuideWindowButton"
+                                    Margin="0,0,10,0"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Top"
+                                    AutomationProperties.Name="{Binding [Settings_Guide_OpenWindowToolTip]}"
+                                    Focusable="True"
+                                    ToolTip="{Binding [Settings_Guide_OpenWindowToolTip]}"
+                                    Style="{StaticResource SettingsIconButtonStyle}"
+                                    Click="OnOpenGuideWindowClick">
+                                <Path Width="16"
+                                      Height="16"
+                                      Data="M6,3 L14,3 L14,11 M14,3 L7,10 M12,9 L12,14 L3,14 L3,5 L8,5"
+                                      Stretch="None"
+                                      Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType={x:Type Button}}}"
+                                      StrokeThickness="1.6"
+                                      StrokeStartLineCap="Round"
+                                      StrokeEndLineCap="Round"
+                                      StrokeLineJoin="Round" />
+                            </Button>
+                        </Grid>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+
+            <Border Grid.Row="2"
+                    Padding="16,0"
+                    Background="{DynamicResource SolidBackgroundFillColorBaseBrush}"
+                    BorderBrush="{DynamicResource DividerStrokeColorDefaultBrush}"
+                    BorderThickness="0,1,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel VerticalAlignment="Center"
+                                Orientation="Horizontal">
+                        <Button x:Name="ImportButton"
+                                MinWidth="72"
+                                Content="{Binding [Settings_Footer_Import]}"
+                                Focusable="True"
+                                IsHitTestVisible="True"
+                                Style="{StaticResource SettingsGhostButtonStyle}"
+                                Click="OnImportClick" />
+                        <Button x:Name="ExportButton"
+                                Margin="10,0,0,0"
+                                MinWidth="72"
+                                Content="{Binding [Settings_Footer_Export]}"
+                                Focusable="True"
+                                IsHitTestVisible="True"
+                                Style="{StaticResource SettingsGhostButtonStyle}"
+                                Click="OnExportClick" />
+                    </StackPanel>
+                    <Button x:Name="ResetButton"
+                            Grid.Column="2"
+                            VerticalAlignment="Center"
+                            Content="{Binding [Settings_Footer_Reset]}"
+                            Focusable="True"
+                            IsHitTestVisible="True"
+                            Style="{StaticResource SettingsGhostButtonStyle}"
+                            Click="OnResetClick" />
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
